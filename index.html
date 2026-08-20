@@ -1,0 +1,1571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nadesoft — Dedicated Software Engineering Teams for Startups</title>
+    <meta
+      name="description"
+      content="Nadesoft builds, deploys, and maintains your product with senior engineering pods or fixed-scope SaaS MVPs. Zero hiring time, zero hassle. Trusted by US & EU startups."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "Plus Jakarta Sans",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+              ],
+            },
+            colors: {
+              base: "#0f172a",
+            },
+            boxShadow: {
+              "glow-indigo":
+                "0 0 0 1px rgba(99,102,241,0.25), 0 8px 40px -8px rgba(79,70,229,0.45)",
+              "glow-sm": "0 0 30px -8px rgba(99,102,241,0.55)",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(24px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              pulseSoft: {
+                "0%, 100%": { opacity: "1" },
+                "50%": { opacity: "0.4" },
+              },
+              floatY: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+            animation: {
+              fadeInUp: "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              pulseSoft: "pulseSoft 2s ease-in-out infinite",
+              floatY: "floatY 6s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #0f172a;
+        font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+      }
+
+      /* subtle background grid + noise texture */
+      .bg-grid {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(148, 163, 184, 0.06) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(148, 163, 184, 0.06) 1px,
+            transparent 1px
+          );
+        background-size: 56px 56px;
+        -webkit-mask-image: radial-gradient(
+          ellipse 80% 60% at 50% 0%,
+          #000 40%,
+          transparent 100%
+        );
+        mask-image: radial-gradient(
+          ellipse 80% 60% at 50% 0%,
+          #000 40%,
+          transparent 100%
+        );
+      }
+
+      .glow-blob {
+        filter: blur(110px);
+      }
+
+      .glass-card {
+        background: rgba(15, 23, 42, 0.5);
+        border: 1px solid rgba(30, 41, 59, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          90deg,
+          #a5b4fc 0%,
+          #818cf8 40%,
+          #6366f1 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal {
+        opacity: 0;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      ::selection {
+        background: rgba(99, 102, 241, 0.35);
+        color: #eef2ff;
+      }
+
+      /* custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 1px;
+        background: #818cf8;
+        transition: width 0.25s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .card-hover {
+        transition:
+          transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.35s ease,
+          box-shadow 0.35s ease,
+          background-color 0.35s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        border-color: rgba(99, 102, 241, 0.5);
+        box-shadow: 0 20px 60px -20px rgba(79, 70, 229, 0.35);
+      }
+
+      .tag-pill {
+        transition: all 0.25s ease;
+      }
+      .tag-pill:hover {
+        border-color: rgba(129, 140, 248, 0.6);
+        background-color: rgba(99, 102, 241, 0.12);
+        color: #c7d2fe;
+        transform: translateY(-2px);
+      }
+
+      #mobile-menu {
+        transition:
+          max-height 0.35s ease,
+          opacity 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+      #mobile-menu.open {
+        max-height: 480px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-slate-950 text-slate-300 antialiased selection:bg-indigo-500/30"
+  >
+    <!-- ============ NAV ============ -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 border-b border-slate-800/60 bg-slate-950/70 backdrop-blur-lg"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-18 py-4">
+          <a href="#" class="flex items-center gap-2.5 group">
+            <img
+              src="assets/logo-icon.png"
+              alt="Nadesoft logo"
+              class="w-9 h-9 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+            <span class="text-lg font-bold tracking-tight text-white"
+              >Nadesoft</span
+            >
+          </a>
+
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300"
+          >
+            <a
+              href="#services"
+              class="nav-link hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="#engagement"
+              class="nav-link hover:text-white transition-colors"
+              >Engagement Models</a
+            >
+            <a href="#stack" class="nav-link hover:text-white transition-colors"
+              >Tech Stack</a
+            >
+            <a href="#work" class="nav-link hover:text-white transition-colors"
+              >Work</a
+            >
+          </nav>
+
+          <div class="hidden md:flex items-center gap-4">
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2.5 transition-all duration-300 shadow-glow-sm hover:shadow-glow-indigo hover:-translate-y-0.5"
+            >
+              Book Technical Call
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            class="md:hidden text-slate-300 hover:text-white p-2 -mr-2"
+            aria-label="Toggle menu"
+          >
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden">
+          <div
+            class="flex flex-col gap-1 pb-6 pt-2 text-sm font-medium border-t border-slate-800/60"
+          >
+            <a
+              href="#services"
+              class="py-3 text-slate-300 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="#engagement"
+              class="py-3 text-slate-300 hover:text-white transition-colors"
+              >Engagement Models</a
+            >
+            <a
+              href="#stack"
+              class="py-3 text-slate-300 hover:text-white transition-colors"
+              >Tech Stack</a
+            >
+            <a
+              href="#work"
+              class="py-3 text-slate-300 hover:text-white transition-colors"
+              >Work</a
+            >
+            <a
+              href="#contact"
+              class="mt-3 inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-4 py-3 transition-colors"
+            >
+              Book Technical Call
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-40 pb-28 md:pt-48 md:pb-36 overflow-hidden">
+      <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+      <div
+        class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-indigo-600/20 rounded-full glow-blob pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-violet-600/10 rounded-full glow-blob pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <div
+          class="reveal in-view inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/60 px-4 py-1.5 text-xs font-medium text-slate-300 backdrop-blur"
+        >
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"
+            ></span>
+          </span>
+          Accepting New Clients &amp; Dedicated Engineering Pods
+        </div>
+
+        <h1
+          class="reveal in-view mt-8 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]"
+          style="animation-delay: 0.05s"
+        >
+          Your Idea. Our Senior Team.<br class="hidden sm:block" />
+          <span class="gradient-text">Zero Hiring Time.</span>
+        </h1>
+
+        <p
+          class="reveal in-view mt-6 max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed"
+          style="animation-delay: 0.15s"
+        >
+          Nadesoft is the engineering partner for US &amp; EU founders and CTOs
+          who'd rather ship than recruit. We design, build, deploy, and maintain
+          your product with a full senior development team — no job posts, no
+          interviews, no onboarding. Just tell us your idea and focus on your
+          business.
+        </p>
+
+        <div
+          class="reveal in-view mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          style="animation-delay: 0.25s"
+        >
+          <a
+            href="#engagement"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 transition-all duration-300 shadow-glow-indigo hover:-translate-y-0.5"
+          >
+            Hire a Dedicated Pod
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a
+            href="#work"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800/80 hover:border-slate-600 text-slate-200 font-semibold px-7 py-3.5 transition-all duration-300"
+          >
+            Explore Our Work
+            <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Floating Stats Bar -->
+        <div
+          class="reveal in-view mt-20 animate-floatY"
+          style="animation-delay: 0.35s"
+        >
+          <div
+            class="glass-card rounded-2xl shadow-glow-indigo mx-auto max-w-4xl grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-800/60"
+          >
+            <div
+              class="flex flex-col items-center justify-center gap-1.5 px-6 py-6"
+            >
+              <i data-lucide="network" class="w-5 h-5 text-indigo-400 mb-1"></i>
+              <span class="text-2xl font-extrabold text-white">5M+</span>
+              <span class="text-xs text-slate-400 text-center"
+                >Monthly API Requests</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center gap-1.5 px-6 py-6"
+            >
+              <i data-lucide="zap" class="w-5 h-5 text-indigo-400 mb-1"></i>
+              <span class="text-2xl font-extrabold text-white">&lt;90ms</span>
+              <span class="text-xs text-slate-400 text-center"
+                >P95 Latency</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center gap-1.5 px-6 py-6"
+            >
+              <i
+                data-lucide="shield-check"
+                class="w-5 h-5 text-indigo-400 mb-1"
+              ></i>
+              <span class="text-2xl font-extrabold text-white">99.95%</span>
+              <span class="text-xs text-slate-400 text-center"
+                >Infra Uptime</span
+              >
+            </div>
+            <div
+              class="flex flex-col items-center justify-center gap-1.5 px-6 py-6"
+            >
+              <i data-lucide="users" class="w-5 h-5 text-indigo-400 mb-1"></i>
+              <span class="text-2xl font-extrabold text-white">50k+</span>
+              <span class="text-xs text-slate-400 text-center"
+                >Active Users Scaled</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOGO / TRUST STRIP ============ -->
+    <section class="relative border-y border-slate-800/60 bg-slate-950/60 py-8">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <p
+          class="text-center text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold"
+        >
+          Bring Your Idea — We Design, Build, Deploy &amp; Maintain It
+        </p>
+        <div
+          class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-slate-500 text-sm font-medium"
+        >
+          <span class="flex items-center gap-2"
+            ><i
+              data-lucide="check-circle-2"
+              class="w-4 h-4 text-indigo-400"
+            ></i>
+            No Recruiting Pipeline</span
+          >
+          <span class="flex items-center gap-2"
+            ><i
+              data-lucide="check-circle-2"
+              class="w-4 h-4 text-indigo-400"
+            ></i>
+            No Onboarding Overhead</span
+          >
+          <span class="flex items-center gap-2"
+            ><i
+              data-lucide="check-circle-2"
+              class="w-4 h-4 text-indigo-400"
+            ></i>
+            Senior Engineers Only</span
+          >
+          <span class="flex items-center gap-2"
+            ><i
+              data-lucide="check-circle-2"
+              class="w-4 h-4 text-indigo-400"
+            ></i>
+            US &amp; EU Timezone Coverage</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="relative py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >What We Do</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+          >
+            End-to-End Engineering, Under One Roof
+          </h2>
+          <p class="mt-4 text-slate-400">
+            From backend architecture to the pixels your users touch — one
+            accountable team handles it all, so you never have to stitch
+            together freelancers again.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="reveal card-hover glass-card rounded-2xl p-8">
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i data-lucide="server-cog" class="w-6 h-6 text-indigo-400"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">
+              Backend &amp; Microservices Architecture
+            </h3>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              Scalable, fault-tolerant APIs and event-driven microservices
+              engineered for real production load — not just demos.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i>
+                Node.js, NestJS &amp; Go services
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i> Python
+                / Django &amp; PHP / Laravel
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i>
+                High-throughput REST &amp; GraphQL APIs
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="reveal card-hover glass-card rounded-2xl p-8"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i
+                data-lucide="layout-panel-left"
+                class="w-6 h-6 text-indigo-400"
+              ></i>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">
+              Web &amp; Mobile Full-Stack Development
+            </h3>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              Fast, accessible, conversion-focused products across web and
+              mobile — built by engineers who obsess over UX.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i> React,
+                Next.js &amp; Vue.js
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i>
+                Cross-platform apps with Flutter
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i>
+                Type-safe TypeScript everywhere
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="reveal card-hover glass-card rounded-2xl p-8"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+            >
+              <i data-lucide="cloud-cog" class="w-6 h-6 text-indigo-400"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">
+              Cloud &amp; DevOps Automation
+            </h3>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              Infrastructure-as-code, automated pipelines, and observability so
+              releases ship daily with zero drama.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i> AWS,
+                GCP, Kubernetes &amp; Docker
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i>
+                Terraform-managed infrastructure
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="dot" class="w-4 h-4 text-indigo-400"></i> Nginx
+                &amp; automated CI/CD pipelines
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ENGAGEMENT MODELS ============ -->
+    <section
+      id="engagement"
+      class="relative py-28 border-t border-slate-800/60"
+    >
+      <div
+        class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full glow-blob pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >Engagement Models</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+          >
+            Choose How You Want to Work With Us
+          </h2>
+          <p class="mt-4 text-slate-400">
+            Whether you need a full-time extension of your team or a scoped MVP
+            shipped fast — no hiring pipeline, no contracts hassle, just senior
+            engineers ready this week.
+          </p>
+        </div>
+
+        <div
+          class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto"
+        >
+          <!-- Dedicated Pod (highlighted) -->
+          <div
+            class="reveal relative rounded-2xl p-px bg-gradient-to-b from-indigo-500 via-indigo-500/40 to-transparent shadow-glow-indigo"
+          >
+            <div
+              class="relative h-full rounded-2xl bg-slate-950 p-8 flex flex-col"
+            >
+              <span
+                class="absolute -top-3.5 left-8 inline-flex items-center gap-1.5 rounded-full bg-indigo-600 text-white text-xs font-bold px-3 py-1 shadow-glow-sm"
+              >
+                <i data-lucide="star" class="w-3.5 h-3.5"></i> Most Popular
+              </span>
+              <div class="flex items-center gap-3 mt-2">
+                <div
+                  class="w-11 h-11 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center"
+                >
+                  <i
+                    data-lucide="users-round"
+                    class="w-5 h-5 text-indigo-400"
+                  ></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">
+                  Dedicated Engineering Pod
+                </h3>
+              </div>
+              <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+                A full cross-functional team embedded in your product, on
+                retainer — backend, frontend, and DevOps working as one unit.
+              </p>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="text-4xl font-extrabold text-white"
+                  >$10k–$20k</span
+                >
+                <span class="text-slate-400 text-sm">/ month</span>
+              </div>
+              <ul class="mt-8 space-y-3.5 text-sm text-slate-200 flex-1">
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-indigo-400 mt-0.5 shrink-0"
+                  ></i>
+                  Full senior engineering pod, ready in days not months
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-indigo-400 mt-0.5 shrink-0"
+                  ></i>
+                  Zero hiring, onboarding, or HR overhead
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-indigo-400 mt-0.5 shrink-0"
+                  ></i>
+                  Dedicated architecture, product &amp; DevOps ownership
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-indigo-400 mt-0.5 shrink-0"
+                  ></i>
+                  Direct Slack &amp; overlap with US/EU hours
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-indigo-400 mt-0.5 shrink-0"
+                  ></i>
+                  Scale the pod up or down as you grow
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3.5 transition-all duration-300 shadow-glow-sm hover:-translate-y-0.5"
+              >
+                Hire a Dedicated Pod
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Fixed-Scope MVP -->
+          <div
+            class="reveal card-hover glass-card rounded-2xl p-8 flex flex-col"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-11 h-11 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-center"
+              >
+                <i data-lucide="rocket" class="w-5 h-5 text-slate-300"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Fixed-Scope MVP</h3>
+            </div>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+              A scoped SaaS project, prototype, or MVP built to a fixed timeline
+              and budget — designed, built, and deployed for you.
+            </p>
+            <div class="mt-6 flex items-baseline gap-2">
+              <span class="text-4xl font-extrabold text-white">$5,000+</span>
+              <span class="text-slate-400 text-sm">/ project</span>
+            </div>
+            <ul class="mt-8 space-y-3.5 text-sm text-slate-300 flex-1">
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"
+                ></i>
+                Fixed price, fixed scope, fixed timeline
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"
+                ></i>
+                From idea to deployed, production-ready product
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"
+                ></i>
+                Ideal for MVPs, prototypes &amp; new features
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"
+                ></i>
+                Clear milestones &amp; weekly progress updates
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i
+                  data-lucide="check"
+                  class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"
+                ></i>
+                Optional handoff to a maintenance retainer
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800/80 hover:border-slate-600 text-slate-200 font-semibold px-6 py-3.5 transition-all duration-300"
+            >
+              Start a Fixed-Scope Project
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW WE WORK ============ -->
+    <section class="relative py-28 border-t border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >How We Work</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+          >
+            From Idea to Production, Fast
+          </h2>
+          <p class="mt-4 text-slate-400">
+            No recruiting funnel, no lengthy vetting process on your side.
+            Here's what actually happens after you reach out.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          <div
+            class="hidden md:block absolute top-6 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-slate-700/70 to-transparent"
+          ></div>
+
+          <div class="reveal relative">
+            <div
+              class="relative z-10 flex items-center gap-3 md:flex-col md:items-start md:gap-0"
+            >
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-slate-950 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-bold shadow-glow-sm"
+              >
+                01
+              </div>
+              <h3 class="text-base font-bold text-white md:mt-5 ml-1 md:ml-0">
+                Technical Call
+              </h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              We scope your idea or hiring need in a 30-minute call — no sales
+              script, just engineers talking shop.
+            </p>
+          </div>
+
+          <div class="reveal relative" style="animation-delay: 0.08s">
+            <div
+              class="relative z-10 flex items-center gap-3 md:flex-col md:items-start md:gap-0"
+            >
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-slate-950 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-bold shadow-glow-sm"
+              >
+                02
+              </div>
+              <h3 class="text-base font-bold text-white md:mt-5 ml-1 md:ml-0">
+                Team &amp; Scope Match
+              </h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              We assemble the exact senior engineers your stack needs, or lock a
+              fixed scope, timeline, and price.
+            </p>
+          </div>
+
+          <div class="reveal relative" style="animation-delay: 0.16s">
+            <div
+              class="relative z-10 flex items-center gap-3 md:flex-col md:items-start md:gap-0"
+            >
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-slate-950 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-bold shadow-glow-sm"
+              >
+                03
+              </div>
+              <h3 class="text-base font-bold text-white md:mt-5 ml-1 md:ml-0">
+                Kickoff Within Days
+              </h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              No onboarding lag. Your pod starts shipping in days, with weekly
+              demos and full visibility into progress.
+            </p>
+          </div>
+
+          <div class="reveal relative" style="animation-delay: 0.24s">
+            <div
+              class="relative z-10 flex items-center gap-3 md:flex-col md:items-start md:gap-0"
+            >
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-slate-950 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-bold shadow-glow-sm"
+              >
+                04
+              </div>
+              <h3 class="text-base font-bold text-white md:mt-5 ml-1 md:ml-0">
+                Ship, Support &amp; Scale
+              </h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              We deploy, monitor, and maintain the system — scaling the team up
+              or down as your product grows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH ECOSYSTEM ============ -->
+    <section id="stack" class="relative py-28 border-t border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >Tech Ecosystem</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+          >
+            Modern, Battle-Tested Tooling
+          </h2>
+          <p class="mt-4 text-slate-400">
+            We pick the right tool for your product's stage and scale — not
+            what's trendy.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Backend -->
+          <div class="reveal glass-card rounded-2xl p-7">
+            <div class="flex items-center gap-2.5 mb-5">
+              <i data-lucide="server" class="w-4 h-4 text-indigo-400"></i>
+              <h3
+                class="text-sm font-bold uppercase tracking-wider text-slate-200"
+              >
+                Backend &amp; Microservices
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Node.js</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >NestJS</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Go</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Python</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Django</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >PHP</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Laravel</span
+              >
+            </div>
+          </div>
+
+          <!-- Frontend / Mobile -->
+          <div
+            class="reveal glass-card rounded-2xl p-7"
+            style="animation-delay: 0.05s"
+          >
+            <div class="flex items-center gap-2.5 mb-5">
+              <i data-lucide="smartphone" class="w-4 h-4 text-indigo-400"></i>
+              <h3
+                class="text-sm font-bold uppercase tracking-wider text-slate-200"
+              >
+                Frontend &amp; Mobile
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >TypeScript</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >React</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Next.js</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Vue.js</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Flutter</span
+              >
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div
+            class="reveal glass-card rounded-2xl p-7"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center gap-2.5 mb-5">
+              <i data-lucide="database" class="w-4 h-4 text-indigo-400"></i>
+              <h3
+                class="text-sm font-bold uppercase tracking-wider text-slate-200"
+              >
+                Databases &amp; Caching
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >PostgreSQL</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Redis</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >MongoDB</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Vector Databases</span
+              >
+            </div>
+          </div>
+
+          <!-- Cloud / DevOps -->
+          <div
+            class="reveal glass-card rounded-2xl p-7"
+            style="animation-delay: 0.15s"
+          >
+            <div class="flex items-center gap-2.5 mb-5">
+              <i data-lucide="cloud" class="w-4 h-4 text-indigo-400"></i>
+              <h3
+                class="text-sm font-bold uppercase tracking-wider text-slate-200"
+              >
+                Cloud &amp; DevOps
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >AWS</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >GCP</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Kubernetes</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Docker</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Terraform</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >Nginx</span
+              >
+              <span
+                class="tag-pill rounded-lg border border-slate-700/70 bg-slate-900/60 px-3.5 py-1.5 text-sm text-slate-300"
+                >CI/CD</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDIES ============ -->
+    <section id="work" class="relative py-28 border-t border-slate-800/60">
+      <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-violet-600/10 rounded-full glow-blob pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-2xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >Selected Work</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+          >
+            Products We've Shipped &amp; Scaled
+          </h2>
+          <p class="mt-4 text-slate-400">
+            Real systems, real users, real performance gains — not case study
+            fluff.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Case Study 1 -->
+          <div
+            class="reveal card-hover glass-card rounded-2xl p-8 flex flex-col"
+          >
+            <div class="flex items-center justify-between">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+              >
+                <i
+                  data-lucide="graduation-cap"
+                  class="w-6 h-6 text-indigo-400"
+                ></i>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+                >EdTech · Multi-Tenant SaaS</span
+              >
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">Smart Pathshala</h3>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              A multi-tenant EdTech platform serving 50,000+ students across
+              100+ institutes. We re-architected the data layer and caching
+              strategy to deliver a 3x speed boost under real classroom load.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-3">
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">50k+</div>
+                <div class="text-[11px] text-slate-500">Students</div>
+              </div>
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">100+</div>
+                <div class="text-[11px] text-slate-500">Institutes</div>
+              </div>
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">3x</div>
+                <div class="text-[11px] text-slate-500">Faster</div>
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Docker</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Redis</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >PostgreSQL</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >DB Optimization</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Multi-Tenant Architecture</span
+              >
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div
+            class="reveal card-hover glass-card rounded-2xl p-8 flex flex-col"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center justify-between">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+              >
+                <i
+                  data-lucide="brain-circuit"
+                  class="w-6 h-6 text-indigo-400"
+                ></i>
+              </div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+                >AI · Real-Time Platform</span
+              >
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">KidsAI Platform</h3>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              A real-time AI application powered by OpenAI, LangChain, and
+              vector search. We introduced Redis session caching to cut query
+              latency by 55%, keeping conversations fast and responsive at
+              scale.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-3">
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">55%</div>
+                <div class="text-[11px] text-slate-500">Latency Cut</div>
+              </div>
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">Real-Time</div>
+                <div class="text-[11px] text-slate-500">AI Responses</div>
+              </div>
+              <div
+                class="rounded-lg border border-slate-800/70 bg-slate-900/50 px-3 py-2.5 text-center"
+              >
+                <div class="text-base font-bold text-white">Vector</div>
+                <div class="text-[11px] text-slate-500">Search-Powered</div>
+              </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >OpenAI</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >LangChain</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Vector DBs</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Redis Caching</span
+              >
+              <span
+                class="rounded-md bg-slate-800/70 text-slate-300 text-xs font-medium px-2.5 py-1"
+                >Node.js</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / LEAD CAPTURE ============ -->
+    <section id="contact" class="relative py-28 border-t border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <!-- Left info panel -->
+          <div class="reveal lg:col-span-2">
+            <span
+              class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+              >Get Started</span
+            >
+            <h2
+              class="mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight"
+            >
+              Bring Your Idea. We'll Handle the Rest.
+            </h2>
+            <p class="mt-4 text-slate-400 leading-relaxed">
+              Tell us what you're building. We'll come back with a clear
+              recommendation — a dedicated pod or a fixed-scope build — no sales
+              pressure, just a straight technical conversation.
+            </p>
+
+            <div class="mt-10 space-y-5">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+                >
+                  <i data-lucide="zap" class="w-5 h-5 text-indigo-400"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">
+                    Zero Hiring Time
+                  </div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    Skip the recruiting pipeline — a senior team is ready this
+                    week.
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+                >
+                  <i
+                    data-lucide="shield-check"
+                    class="w-5 h-5 text-indigo-400"
+                  ></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">
+                    Zero Hassle
+                  </div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    We design, build, deploy, and maintain — you focus on your
+                    business.
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+                >
+                  <i data-lucide="globe" class="w-5 h-5 text-indigo-400"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">
+                    Built for US &amp; EU Founders
+                  </div>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    Overlapping hours, clear communication, no timezone
+                    guesswork.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="mailto:contact@nadesoft.com"
+              class="mt-10 inline-flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i>
+              contact@nadesoft.com
+            </a>
+          </div>
+
+          <!-- Right form panel -->
+          <div
+            class="reveal lg:col-span-3 glass-card rounded-2xl p-8 md:p-10"
+            style="animation-delay: 0.1s"
+          >
+            <form id="lead-form" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-slate-300 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Jane Founder"
+                    class="w-full rounded-lg bg-slate-900/70 border border-slate-700/70 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/60 transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-slate-300 mb-2"
+                    >Work Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="jane@startup.com"
+                    class="w-full rounded-lg bg-slate-900/70 border border-slate-700/70 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/60 transition-all"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="engagement_type"
+                  class="block text-sm font-medium text-slate-300 mb-2"
+                  >Engagement Type</label
+                >
+                <select
+                  id="engagement_type"
+                  name="engagement_type"
+                  required
+                  class="w-full rounded-lg bg-slate-900/70 border border-slate-700/70 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/60 transition-all"
+                >
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="Dedicated Pod ($10k-$20k/mo)">
+                    Dedicated Engineering Pod ($10k–$20k/mo)
+                  </option>
+                  <option value="Fixed-Scope MVP ($5,000+)">
+                    Fixed-Scope MVP ($5,000+)
+                  </option>
+                  <option value="Not sure yet">
+                    Not sure yet — need guidance
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="brief"
+                  class="block text-sm font-medium text-slate-300 mb-2"
+                  >Project Brief</label
+                >
+                <textarea
+                  id="brief"
+                  name="project_brief"
+                  rows="5"
+                  required
+                  placeholder="Tell us what you're building, your timeline, and any technical constraints..."
+                  class="w-full rounded-lg bg-slate-900/70 border border-slate-700/70 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/60 transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-6 py-3.5 transition-all duration-300 shadow-glow-sm hover:shadow-glow-indigo hover:-translate-y-0.5"
+              >
+                <span id="submit-btn-text">Send Project Brief</span>
+                <i data-lucide="send" class="w-4 h-4" id="submit-btn-icon"></i>
+              </button>
+
+              <p id="form-status" class="text-xs text-center text-slate-500">
+                We typically respond within one business day.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="relative border-t border-slate-800/60 bg-slate-950/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div class="flex flex-col items-center md:items-start gap-3">
+            <a href="#" class="flex items-center gap-2.5">
+              <img
+                src="assets/logo-icon.png"
+                alt="Nadesoft logo"
+                class="w-9 h-9 object-contain"
+              />
+              <span class="text-lg font-bold tracking-tight text-white"
+                >Nadesoft</span
+              >
+            </a>
+            <p class="text-sm text-slate-500 text-center md:text-left max-w-xs">
+              High-performance software engineering &amp; dedicated developer
+              teams for US &amp; EU startups.
+            </p>
+          </div>
+
+          <nav
+            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400"
+          >
+            <a href="#services" class="hover:text-white transition-colors"
+              >Services</a
+            >
+            <a href="#engagement" class="hover:text-white transition-colors"
+              >Engagement Models</a
+            >
+            <a href="#stack" class="hover:text-white transition-colors"
+              >Tech Stack</a
+            >
+            <a href="#work" class="hover:text-white transition-colors">Work</a>
+            <a href="#contact" class="hover:text-white transition-colors"
+              >Contact</a
+            >
+          </nav>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"
+        >
+          <span>&copy; 2026 Nadesoft. All rights reserved.</span>
+          <a
+            href="mailto:contact@nadesoft.com"
+            class="flex items-center gap-2 hover:text-slate-300 transition-colors"
+          >
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            contact@nadesoft.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Reveal-on-scroll runs first and independently, so a hiccup in any
+      // other block (icons, form, menu) can never leave the page blank.
+      const revealEls = document.querySelectorAll(".reveal:not(.in-view)");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("in-view"));
+      }
+      // Safety net: force everything visible after 1.2s no matter what.
+      setTimeout(() => {
+        document
+          .querySelectorAll(".reveal:not(.in-view)")
+          .forEach((el) => el.classList.add("in-view"));
+      }, 1200);
+
+      // Icons (guarded: a blocked/slow CDN shouldn't break anything else)
+      try {
+        lucide.createIcons();
+      } catch (err) {
+        console.warn("Lucide icons failed to load:", err);
+      }
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("menu-icon-open");
+      const iconClose = document.getElementById("menu-icon-close");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+
+      // Lead form -> Google Sheets (via Google Apps Script Web App)
+      // Replace with your deployed Apps Script /exec URL. See google-apps-script/Code.gs for the script to deploy.
+      const SHEET_ENDPOINT =
+        "https://script.google.com/macros/s/AKfycbywoc7QRr94Q5QV7cisMGbNMD_otUyfllATNXEJu40RyA5n01x8G5keCPR3h-FixIMW/exec";
+
+      const leadForm = document.getElementById("lead-form");
+      const submitBtn = document.getElementById("submit-btn");
+      const submitBtnText = document.getElementById("submit-btn-text");
+      const formStatus = document.getElementById("form-status");
+
+      leadForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtnText.textContent = "Sending...";
+        formStatus.textContent = "";
+
+        const formData = new FormData(leadForm);
+
+        try {
+          // Apps Script doesn't return CORS headers, so we fire-and-forget with no-cors.
+          // The request still reaches the script and the row still gets written.
+          await fetch(SHEET_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          });
+
+          formStatus.textContent =
+            "Thanks — we'll be in touch within one business day.";
+          formStatus.classList.remove("text-slate-500", "text-red-400");
+          formStatus.classList.add("text-emerald-400");
+          leadForm.reset();
+        } catch (err) {
+          formStatus.textContent =
+            "Something went wrong. Please email us directly at contact@nadesoft.com.";
+          formStatus.classList.remove("text-slate-500", "text-emerald-400");
+          formStatus.classList.add("text-red-400");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtnText.textContent = "Send Project Brief";
+        }
+      });
+    </script>
+  </body>
+</html>
