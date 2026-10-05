@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project | Nadesoft Portfolio</title>
+    <meta
+      name="description"
+      content="A product designed, built and shipped by Nadesoft."
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "Plus Jakarta Sans",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+              ],
+            },
+            boxShadow: {
+              "glow-indigo":
+                "0 0 0 1px rgba(99,102,241,0.25), 0 8px 40px -8px rgba(79,70,229,0.45)",
+              "glow-sm": "0 0 30px -8px rgba(99,102,241,0.55)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #020617;
+        font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+      }
+      .bg-grid {
+        background-image:
+          linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+        background-size: 56px 56px;
+        -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+        mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+      }
+      .glass-card {
+        background: rgba(15, 23, 42, 0.5);
+        border: 1px solid rgba(30, 41, 59, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal {
+        opacity: 0;
+      }
+      .reveal.in-view {
+        opacity: 1;
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      ::selection {
+        background: rgba(99, 102, 241, 0.35);
+        color: #eef2ff;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-950 text-slate-300 antialiased">
+    <header
+      class="fixed top-0 inset-x-0 z-50 border-b border-slate-800/60 bg-slate-950/70 backdrop-blur-lg"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between py-4"
+      >
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <img
+            src="assets/logo-icon.png"
+            alt="Nadesoft logo"
+            class="w-9 h-9 object-contain group-hover:scale-105 transition-transform duration-300"
+          />
+          <span class="text-lg font-bold tracking-tight text-white"
+            >Nadesoft</span
+          >
+        </a>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a
+            href="index.html#portfolio"
+            class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+          >
+            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">All projects</span>
+          </a>
+          <a
+            href="index.html#contact"
+            class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2.5 transition-all duration-300 shadow-glow-sm hover:shadow-glow-indigo"
+          >
+            Book a call
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Rendered from data/portfolio.json by assets/js/portfolio.js -->
+    <main id="project-app">
+      <div class="min-h-screen flex items-center justify-center">
+        <span
+          class="w-8 h-8 rounded-full border-2 border-slate-700 border-t-indigo-400 animate-spin"
+          aria-label="Loading project"
+        ></span>
+      </div>
+    </main>
+
+    <footer class="border-t border-slate-800/60 bg-slate-950/60">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"
+      >
+        <span>&copy; 2026 Nadesoft. All rights reserved.</span>
+        <a
+          href="mailto:contact@nadesoft.com"
+          class="flex items-center gap-2 hover:text-slate-300 transition-colors"
+        >
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          contact@nadesoft.com
+        </a>
+      </div>
+    </footer>
+
+    <script src="assets/js/portfolio.js"></script>
+    <script>
+      Portfolio.renderProject();
+    </script>
+  </body>
+</html>

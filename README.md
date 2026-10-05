@@ -160,6 +160,21 @@ The contact form doesn't use a third-party form service — it posts directly to
 
 ---
 
+## Editing the Portfolio
+
+The **Portfolio** section on the home page and every project details page (`project.html?id=<id>`) are generated from one file: [`data/portfolio.json`](data/portfolio.json). You never need to touch the HTML or JS to add or change a project.
+
+- **Add a project:** copy an existing entry in `projects`, give it a new unique `id`, and fill in the fields. Its details page is then live at `project.html?id=<your-id>`.
+- **Order:** projects show in the order they're listed. `featured: true` also puts a project in the Spotlight row.
+- **Status:** `live`, `coming-soon` or `in-development`. When an app goes live, set `status` to `live` and add a `links` entry, e.g. `{ "store": "google-play", "url": "..." }`. The store keys are `google-play`, `microsoft-store`, `chrome-web-store` and `vscode-marketplace`.
+- **Images:** icons go in `assets/portfolio/`, and screenshots and covers in `assets/portfolio/shots/`. Use WebP, around 450px wide for phone shots and 1280px for landscape. Set `orientation` to `portrait` or `landscape` to match the screenshots.
+- **Icons in highlights:** `icon` takes any [Lucide](https://lucide.dev/icons) icon name.
+- The headline numbers (products built, live in stores, storefronts, platforms) and filter-tab counts are calculated from the JSON automatically.
+
+> The page loads the JSON with `fetch`, so open the site through a local server (see [Local Development](#local-development)), not by double-clicking `index.html`.
+
+---
+
 ## Customization
 
 | What | Where |

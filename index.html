@@ -71,6 +71,8 @@
       };
     </script>
 
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -261,6 +263,11 @@
             <a href="#work" class="nav-link hover:text-white transition-colors"
               >Work</a
             >
+            <a
+              href="#portfolio"
+              class="nav-link hover:text-white transition-colors"
+              >Portfolio</a
+            >
           </nav>
 
           <div class="hidden md:flex items-center gap-4">
@@ -306,6 +313,11 @@
               href="#work"
               class="py-3 text-slate-300 hover:text-white transition-colors"
               >Work</a
+            >
+            <a
+              href="#portfolio"
+              class="py-3 text-slate-300 hover:text-white transition-colors"
+              >Portfolio</a
             >
             <a
               href="#contact"
@@ -375,7 +387,7 @@
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <a
-            href="#work"
+            href="#portfolio"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800/80 hover:border-slate-600 text-slate-200 font-semibold px-7 py-3.5 transition-all duration-300"
           >
             Explore Our Work
@@ -1231,6 +1243,50 @@
       </div>
     </section>
 
+    <!-- ============ PORTFOLIO ============ -->
+    <!-- Content comes from data/portfolio.json, rendered by assets/js/portfolio.js -->
+    <section
+      id="portfolio"
+      class="relative py-28 border-t border-slate-800/60 overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+      <div
+        class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full glow-blob pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full glow-blob pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="reveal max-w-3xl mx-auto text-center">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+            >Portfolio</span
+          >
+          <h2
+            class="mt-4 text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight"
+          >
+            Products we designed, built<br class="hidden sm:block" />
+            <span class="gradient-text">and shipped ourselves.</span>
+          </h2>
+          <p class="mt-5 text-slate-400 text-lg">
+            Games, mobile apps, browser extensions and SaaS platforms, live on
+            Google Play, the Microsoft Store, the Chrome Web Store and the VS
+            Code Marketplace. The same team builds yours.
+          </p>
+        </div>
+
+        <div id="portfolio-app" class="mt-14">
+          <div class="flex justify-center py-16">
+            <span
+              class="w-8 h-8 rounded-full border-2 border-slate-700 border-t-indigo-400 animate-spin"
+              aria-label="Loading portfolio"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT / LEAD CAPTURE ============ -->
     <section id="contact" class="relative py-28 border-t border-slate-800/60">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -1449,6 +1505,9 @@
               >Tech Stack</a
             >
             <a href="#work" class="hover:text-white transition-colors">Work</a>
+            <a href="#portfolio" class="hover:text-white transition-colors"
+              >Portfolio</a
+            >
             <a href="#contact" class="hover:text-white transition-colors"
               >Contact</a
             >
@@ -1470,6 +1529,7 @@
       </div>
     </footer>
 
+    <script src="assets/js/portfolio.js"></script>
     <script>
       // Reveal-on-scroll runs first and independently, so a hiccup in any
       // other block (icons, form, menu) can never leave the page blank.
@@ -1523,6 +1583,9 @@
           iconClose.classList.add("hidden");
         });
       });
+
+      // Portfolio section (data/portfolio.json)
+      if (window.Portfolio) Portfolio.renderSection();
 
       // Lead form -> Google Sheets (via Google Apps Script Web App)
       // Replace with your deployed Apps Script /exec URL. See google-apps-script/Code.gs for the script to deploy.

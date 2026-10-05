@@ -1,0 +1,2131 @@
+{
+  "_readme": "Edit this file to update the portfolio. Each project needs a unique `id` (used in the URL: project.html?id=<id>). `type` must be one of the keys in `types`. `status` must be one of the keys in `statuses`. `featured: true` puts the project in the spotlight row on the home page. Projects appear in the order listed here. Screenshot and icon paths are relative to the site root. Set `orientation` to `portrait` (phone shots) or `landscape` (PC / browser / tablet shots). Leave `icon` empty to use `fallbackIcon` (any Lucide icon name).",
+  "types": {
+    "game": {
+      "label": "Games",
+      "singular": "Game",
+      "icon": "gamepad-2"
+    },
+    "app": {
+      "label": "Mobile Apps",
+      "singular": "Mobile App",
+      "icon": "smartphone"
+    },
+    "extension": {
+      "label": "Browser & IDE Extensions",
+      "singular": "Extension",
+      "icon": "puzzle"
+    },
+    "saas": {
+      "label": "SaaS Platforms",
+      "singular": "SaaS Platform",
+      "icon": "layers"
+    }
+  },
+  "statuses": {
+    "live": {
+      "label": "Live",
+      "tone": "emerald"
+    },
+    "coming-soon": {
+      "label": "Coming Soon",
+      "tone": "amber"
+    },
+    "in-development": {
+      "label": "In Development",
+      "tone": "sky"
+    }
+  },
+  "stores": {
+    "google-play": {
+      "label": "Google Play",
+      "short": "Play Store",
+      "url": "https://play.google.com/store/apps/developer?id=NADESOFT"
+    },
+    "microsoft-store": {
+      "label": "Microsoft Store",
+      "short": "Microsoft Store",
+      "url": "https://apps.microsoft.com/search/publisher?name=NADESOFT"
+    },
+    "chrome-web-store": {
+      "label": "Chrome Web Store",
+      "short": "Chrome Web Store",
+      "url": "https://chromewebstore.google.com/search/nadesoft"
+    },
+    "vscode-marketplace": {
+      "label": "VS Code Marketplace",
+      "short": "VS Code Marketplace",
+      "url": "https://marketplace.visualstudio.com/publishers/nadesoft"
+    }
+  },
+  "projects": [
+    {
+      "id": "catastrophe",
+      "name": "CatAsTrophe – Feline Rescue",
+      "shortName": "CatAsTrophe",
+      "type": "game",
+      "status": "live",
+      "featured": true,
+      "accent": "#f59e0b",
+      "category": "Casual · Stealth Puzzle",
+      "platforms": [
+        "Android",
+        "Windows"
+      ],
+      "tagline": "Sneak past 20 kinds of patrolling animals and lead every lost kitten to the rescue van.",
+      "summary": "A stealth-rescue game with 4 worlds, 32 hand-built stages, 14 heroes with unique abilities, endless arenas and a full live-ops loop. It's on Google Play and the Microsoft Store.",
+      "description": [
+        "The kittens are lost, and the neighbourhood animals are on patrol. Players ping a sonar radar to find kittens hiding in bushes, barrels and boxes, hold to rescue them, then lead the whole paw-parade back to the van without getting caught.",
+        "Each of the 20 animals has its own behaviour to learn: dogs prowl, rhinos charge, parrots swoop and crocodiles lie in wait. Four themed worlds add traps, crumbling bridges, keys and gates, teleporters and sandstorms.",
+        "We built and shipped it on two storefronts from a single Unity 6 codebase, with separate store flavours for Google Play and the Microsoft Store (GDK), each with its own billing and achievements."
+      ],
+      "highlights": [
+        {
+          "icon": "map",
+          "title": "4 worlds, 32 stages",
+          "text": "Suburb Chaos, Frozen Peaks, Desert Disaster and Mars Meltdown, with up to three stars per stage and endless arenas."
+        },
+        {
+          "icon": "shield-half",
+          "title": "14 heroes, 6 abilities",
+          "text": "Radar pulse, sprint, shield bubble, catnip decoy, stealth cloak and stun whistle. Heroes level up with shards from chests."
+        },
+        {
+          "icon": "brain",
+          "title": "20 animal AIs",
+          "text": "Each patrol animal has distinct sight, movement and chase behaviour, so players have to learn every one of them."
+        },
+        {
+          "icon": "calendar-check",
+          "title": "Live-ops loop",
+          "text": "7-day login calendar, daily and weekly missions, daily shop deals and a collectible kitten album with rare golden kittens."
+        },
+        {
+          "icon": "trophy",
+          "title": "Play Games Services",
+          "text": "Achievements, leaderboards and cloud save across devices through Google Play Games."
+        },
+        {
+          "icon": "store",
+          "title": "Multi-store billing",
+          "text": "One codebase that maps products to Google Play and Microsoft Store add-on IDs, with remove-ads, gem packs and a starter pack."
+        }
+      ],
+      "stats": [
+        {
+          "value": "32",
+          "label": "Stages"
+        },
+        {
+          "value": "14",
+          "label": "Heroes"
+        },
+        {
+          "value": "20",
+          "label": "Animal AIs"
+        },
+        {
+          "value": "2",
+          "label": "Storefronts"
+        }
+      ],
+      "tech": [
+        "Unity 6",
+        "C#",
+        "URP",
+        "2D Tilemap",
+        "Input System",
+        "Google Play Games Services",
+        "Unity IAP",
+        "Google AdMob",
+        "Microsoft GDK",
+        "Mobile Notifications",
+        "Unity Test Framework"
+      ],
+      "skills": [
+        "Game design",
+        "Enemy AI",
+        "Level design",
+        "Live-ops systems",
+        "Monetisation (IAP + ads)",
+        "Multi-store release",
+        "Cloud save",
+        "Automated testing"
+      ],
+      "icon": "assets/portfolio/catastrophe.webp",
+      "cover": "assets/portfolio/shots/catastrophe-cover.webp",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/catastrophe-1.webp",
+        "assets/portfolio/shots/catastrophe-2.webp",
+        "assets/portfolio/shots/catastrophe-3.webp",
+        "assets/portfolio/shots/catastrophe-4.webp",
+        "assets/portfolio/shots/catastrophe-5.webp",
+        "assets/portfolio/shots/catastrophe-6.webp",
+        "assets/portfolio/shots/catastrophe-7.webp",
+        "assets/portfolio/shots/catastrophe-8.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.NADES.CatasTrophe"
+        },
+        {
+          "store": "microsoft-store",
+          "url": "https://apps.microsoft.com/detail/9PG1M63RZ2BK"
+        }
+      ]
+    },
+    {
+      "id": "quote-it",
+      "name": "Estimates & Invoices – Quote it",
+      "shortName": "Quote it",
+      "type": "app",
+      "status": "live",
+      "featured": true,
+      "accent": "#22c55e",
+      "category": "Productivity · Business",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Win the job before you leave the driveway: signed PDF quotes in about a minute, even offline.",
+      "summary": "An offline-first estimate and invoice maker for contractors and tradespeople, with branded PDFs, e-signatures, payment tracking and a revenue dashboard.",
+      "description": [
+        "Quote it lets contractors walk the job, tap in the work, capture the client's signature and send a clean, professional PDF quote on the spot, with zero signal if needed.",
+        "Approved estimates convert to invoices with one tap. Full or partial payments, overdue invoices and polite payment reminders are all handled from the phone, and a dashboard shows money pending, paid and overdue alongside monthly revenue and estimate win rate.",
+        "Under the hood it uses a local SQLite database as the source of truth, syncs to Firebase in the background, and renders PDFs from five designed templates."
+      ],
+      "highlights": [
+        {
+          "icon": "wifi-off",
+          "title": "Offline-first",
+          "text": "SQLite on the device is the source of truth. Quotes work on a rooftop with no signal and sync later."
+        },
+        {
+          "icon": "file-signature",
+          "title": "Signature capture",
+          "text": "Clients sign right on the phone, and the signature is embedded in the final PDF."
+        },
+        {
+          "icon": "file-text",
+          "title": "5 PDF designs",
+          "text": "Classic, Modern Slate, Warm Terracotta, Emerald Contractor and Minimal Mono, with business branding and payment terms."
+        },
+        {
+          "icon": "banknote",
+          "title": "Get paid faster",
+          "text": "Estimate-to-invoice in one tap, partial payments, balance due, overdue flags and one-tap reminders."
+        },
+        {
+          "icon": "bar-chart-3",
+          "title": "Know your numbers",
+          "text": "Dashboard with pending, paid and overdue totals, a monthly revenue chart and estimate win rate."
+        },
+        {
+          "icon": "share-2",
+          "title": "Share anywhere",
+          "text": "Send by WhatsApp, email or SMS, or print directly from the phone."
+        }
+      ],
+      "stats": [
+        {
+          "value": "~60s",
+          "label": "Per quote"
+        },
+        {
+          "value": "5",
+          "label": "PDF templates"
+        },
+        {
+          "value": "100%",
+          "label": "Works offline"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "SQLite",
+        "Firebase",
+        "React Native IAP",
+        "React Native Paper",
+        "Expo Print"
+      ],
+      "skills": [
+        "Offline-first architecture",
+        "Background sync",
+        "PDF generation",
+        "E-signature capture",
+        "In-app purchases",
+        "Business analytics"
+      ],
+      "icon": "assets/portfolio/quoteit.webp",
+      "cover": "assets/portfolio/shots/quoteit-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/quoteit-1.webp",
+        "assets/portfolio/shots/quoteit-2.webp",
+        "assets/portfolio/shots/quoteit-3.webp",
+        "assets/portfolio/shots/quoteit-4.webp",
+        "assets/portfolio/shots/quoteit-5.webp",
+        "assets/portfolio/shots/quoteit-6.webp",
+        "assets/portfolio/shots/quoteit-7.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.nadesoft.quoteit"
+        }
+      ]
+    },
+    {
+      "id": "swipe-dash",
+      "name": "Swipe Dash",
+      "shortName": "Swipe Dash",
+      "type": "game",
+      "status": "live",
+      "featured": true,
+      "accent": "#d946ef",
+      "category": "Arcade · Online Multiplayer",
+      "platforms": [
+        "Windows",
+        "Android"
+      ],
+      "tagline": "A neon three-lane runner with real-time online races for up to 4 players.",
+      "summary": "A fast arcade runner with real-time multiplayer (Unity Lobby + Relay), accounts with cross-device cloud save, and 12 unlockable characters. Live on the Microsoft Store.",
+      "description": [
+        "Swipe Dash is easy to pick up and hard to put down. Players switch lanes to dodge barriers, steer around rocks and collect glowing coins while the track speeds up every 15 seconds.",
+        "RACE ONLINE puts up to four players on the same track in real time. Quick Race finds a match in seconds, or players can create a private race and share a join code with friends. Every racer is shown in their own colour, with name tags, flags and trails.",
+        "Progress works as a guest with no sign-up, and a free account adds Firestore cloud save with a three-way merge across PC and phone."
+      ],
+      "highlights": [
+        {
+          "icon": "users",
+          "title": "4-player online races",
+          "text": "Real-time races built on Netcode for GameObjects with Unity Lobby and Relay, with quick match or private join codes."
+        },
+        {
+          "icon": "cloud",
+          "title": "Cross-device cloud save",
+          "text": "Guest-first accounts with Firebase Auth and a batched, offline-safe Firestore sync that merges progress across devices."
+        },
+        {
+          "icon": "palette",
+          "title": "12 characters, trails and coins",
+          "text": "Unlockable characters that blink and react, coin shapes, neon trails, and about 230 searchable country flags."
+        },
+        {
+          "icon": "gamepad-2",
+          "title": "Play your way",
+          "text": "Swipe on mobile, or use keyboard, mouse drag or a gamepad on PC."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Tested and secured",
+          "text": "EditMode and PlayMode test suites, plus versioned Firestore security rules with emulator tests."
+        },
+        {
+          "icon": "monitor-smartphone",
+          "title": "Cross-platform",
+          "text": "One Unity 6 codebase ships an ad-free Windows build to the Microsoft Store and an Android build."
+        }
+      ],
+      "stats": [
+        {
+          "value": "4",
+          "label": "Players per race"
+        },
+        {
+          "value": "12",
+          "label": "Characters"
+        },
+        {
+          "value": "230",
+          "label": "Flags"
+        }
+      ],
+      "tech": [
+        "Unity 6",
+        "C#",
+        "URP",
+        "Netcode for GameObjects",
+        "Unity Lobby & Relay",
+        "Firebase Auth",
+        "Cloud Firestore",
+        "Google AdMob",
+        "Input System",
+        "Unity Test Framework"
+      ],
+      "skills": [
+        "Real-time multiplayer",
+        "Matchmaking",
+        "Cloud save & merge",
+        "Security rules",
+        "Cross-platform input",
+        "Automated testing"
+      ],
+      "icon": "assets/portfolio/swipedash.webp",
+      "cover": "assets/portfolio/shots/swipedash-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/swipedash-1.webp",
+        "assets/portfolio/shots/swipedash-2.webp",
+        "assets/portfolio/shots/swipedash-3.webp",
+        "assets/portfolio/shots/swipedash-4.webp",
+        "assets/portfolio/shots/swipedash-5.webp",
+        "assets/portfolio/shots/swipedash-6.webp"
+      ],
+      "links": [
+        {
+          "store": "microsoft-store",
+          "url": "https://apps.microsoft.com/detail/9P6RDR6MFP29"
+        }
+      ]
+    },
+    {
+      "id": "metro-live-dhaka",
+      "name": "Metro Live Dhaka",
+      "shortName": "Metro Live Dhaka",
+      "type": "app",
+      "status": "coming-soon",
+      "featured": true,
+      "accent": "#06b6d4",
+      "category": "Travel · Transit",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "tagline": "Watch Dhaka MRT Line 6 trains move through a low-poly 3D city in real time.",
+      "summary": "A real-time transit visualiser for Dhaka Metro Rail with fares, schedules, live 3D trains from four camera angles, GPS ride-along and a commuter passport.",
+      "description": [
+        "Metro Live Dhaka gives commuters fares and schedules for MRT Line 6, then goes further: trains move through a low-poly Dhaka rendered in 3D, viewable from chase, cab, platform and overview cameras.",
+        "With GPS ride-along the app follows the rider's own train. A commuter passport collects stamps for stations visited, and Rapid Pass top-ups open the official site without leaving the app.",
+        "All transit logic runs on the device. The only network use is an optional Firebase backup of the passport, and the app is fully localised in Bangla and English."
+      ],
+      "highlights": [
+        {
+          "icon": "box",
+          "title": "Real-time 3D city",
+          "text": "Three.js on expo-gl renders a low-poly Dhaka with trains moving on the live timetable."
+        },
+        {
+          "icon": "video",
+          "title": "4 camera angles",
+          "text": "Chase, cab, platform and overview cameras, with day, golden-hour and night lighting."
+        },
+        {
+          "icon": "navigation",
+          "title": "GPS ride-along",
+          "text": "Background location follows the rider's train and counts down to the next station."
+        },
+        {
+          "icon": "stamp",
+          "title": "Commuter passport",
+          "text": "Collect stamps for every station visited, with an optional cloud backup."
+        },
+        {
+          "icon": "languages",
+          "title": "Bangla + English",
+          "text": "Fully localised UI and store listing for both languages."
+        },
+        {
+          "icon": "cpu",
+          "title": "On-device logic",
+          "text": "Fares, schedules and train positions are computed locally, with no backend needed."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3D",
+          "label": "Live map"
+        },
+        {
+          "value": "4",
+          "label": "Cameras"
+        },
+        {
+          "value": "2",
+          "label": "Languages"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo SDK 57",
+        "TypeScript",
+        "Expo Router",
+        "Three.js",
+        "expo-gl",
+        "Zustand",
+        "Firebase",
+        "Expo Location",
+        "Jest"
+      ],
+      "skills": [
+        "3D rendering on mobile",
+        "Real-time simulation",
+        "Background GPS",
+        "Localisation",
+        "Performance optimisation",
+        "Unit testing"
+      ],
+      "icon": "assets/portfolio/metro.webp",
+      "cover": "assets/portfolio/shots/metro-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/metro-1.webp",
+        "assets/portfolio/shots/metro-2.webp",
+        "assets/portfolio/shots/metro-3.webp",
+        "assets/portfolio/shots/metro-4.webp",
+        "assets/portfolio/shots/metro-5.webp",
+        "assets/portfolio/shots/metro-6.webp",
+        "assets/portfolio/shots/metro-7.webp",
+        "assets/portfolio/shots/metro-8.webp"
+      ],
+      "links": []
+    },
+    {
+      "id": "noor",
+      "name": "Noor: Prayer Times & Quran",
+      "shortName": "Noor",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#14b8a6",
+      "category": "Lifestyle · Faith",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Accurate prayer times, the full Quran with audio, and a Qibla compass in one calm app.",
+      "summary": "A Muslim lifestyle app with GPS prayer times, athan notifications, all 114 surahs with recitation, a Qibla compass, tasbeeh and habit streaks.",
+      "description": [
+        "Noor gives accurate Fajr, Dhuhr, Asr, Maghrib and Isha times for the user's exact location, with a live countdown, athan notifications and five trusted calculation methods.",
+        "The full Holy Quran is included in Uthmani script with Sahih International translation and ayah-by-ayah recitation by Sheikh Mishary Rashid Alafasy.",
+        "Streaks, daily goals and badges turn salah, Quran and dhikr into a lasting habit."
+      ],
+      "highlights": [
+        {
+          "icon": "clock",
+          "title": "Accurate prayer times",
+          "text": "GPS or any city, 5 calculation methods (ISNA, MWL, Umm al-Qura, Egyptian, UOIF), plus a monthly timetable that works offline."
+        },
+        {
+          "icon": "bell-ring",
+          "title": "Athan reminders",
+          "text": "Scheduled athan notifications for every salah, with a gentle pre-prayer reminder."
+        },
+        {
+          "icon": "book-open",
+          "title": "Quran with audio",
+          "text": "All 114 surahs with translation and ayah-by-ayah audio recitation."
+        },
+        {
+          "icon": "compass",
+          "title": "Qibla compass",
+          "text": "Live compass needle with exact bearing and calibration guidance."
+        },
+        {
+          "icon": "flame",
+          "title": "Habit streaks",
+          "text": "Streaks, daily goals and badges across salah, Quran and dhikr."
+        },
+        {
+          "icon": "activity",
+          "title": "Production monitoring",
+          "text": "Firebase Analytics, Crashlytics and Sentry keep the release stable."
+        }
+      ],
+      "stats": [
+        {
+          "value": "114",
+          "label": "Surahs with audio"
+        },
+        {
+          "value": "5",
+          "label": "Calc methods"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "React Navigation",
+        "Firebase",
+        "Crashlytics",
+        "Sentry",
+        "Expo Audio",
+        "Expo Location",
+        "i18next"
+      ],
+      "skills": [
+        "Astronomical time calculation",
+        "Geolocation",
+        "Audio streaming",
+        "Scheduled notifications",
+        "Localisation",
+        "Crash monitoring"
+      ],
+      "icon": "assets/portfolio/noor.webp",
+      "cover": "assets/portfolio/shots/noor-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/noor-1.webp",
+        "assets/portfolio/shots/noor-2.webp",
+        "assets/portfolio/shots/noor-3.webp",
+        "assets/portfolio/shots/noor-4.webp",
+        "assets/portfolio/shots/noor-5.webp",
+        "assets/portfolio/shots/noor-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.nadesoft.noormuslim"
+        }
+      ]
+    },
+    {
+      "id": "crazy-car",
+      "name": "Crazy Car: Endless Car Racing",
+      "shortName": "Crazy Car",
+      "type": "game",
+      "status": "live",
+      "featured": false,
+      "accent": "#ef4444",
+      "category": "Racing · Endless",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Weave through traffic, hit nitro and chase a new best on four wild roads.",
+      "summary": "An endless highway racer with 25 upgradeable cars, 4 themed roads, near-miss scoring, power-ups and tilt or wheel steering.",
+      "description": [
+        "Crazy Car is an endless racer where the road gets faster and busier the longer you survive. Skimming past cars pays out near-miss bonus coins, and NITRO blasts you past the pack.",
+        "Players unlock 25 cars, from a City Sedan up to the Future GT, and upgrade five stats on each. Four roads, Countryside, Fantasy Town, Graveyard and Pirate Coast, raise the risk and the coin multiplier."
+      ],
+      "highlights": [
+        {
+          "icon": "car",
+          "title": "25 cars, 5 upgrade stats",
+          "text": "Speed, acceleration, handling, armor and nitro on every car."
+        },
+        {
+          "icon": "map",
+          "title": "4 themed roads",
+          "text": "Riskier roads pay more, with up to +35% coins on Pirate Coast."
+        },
+        {
+          "icon": "zap",
+          "title": "Near-miss scoring",
+          "text": "The closer you skim traffic, the more you earn."
+        },
+        {
+          "icon": "smartphone",
+          "title": "Wheel or tilt",
+          "text": "On-screen steering wheel or gyroscope tilt, with large gas and brake buttons."
+        },
+        {
+          "icon": "magnet",
+          "title": "Power-ups",
+          "text": "Shield, coin magnet and nitro refills on the road."
+        }
+      ],
+      "stats": [
+        {
+          "value": "25",
+          "label": "Cars"
+        },
+        {
+          "value": "4",
+          "label": "Roads"
+        }
+      ],
+      "tech": [
+        "Unity",
+        "C#",
+        "TextMeshPro",
+        "AI Navigation",
+        "Google AdMob"
+      ],
+      "skills": [
+        "Procedural endless track",
+        "Vehicle physics",
+        "Progression & economy",
+        "Mobile controls",
+        "Ad monetisation"
+      ],
+      "icon": "assets/portfolio/crazycar.webp",
+      "cover": "assets/portfolio/shots/crazycar-cover.webp",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/crazycar-1.webp",
+        "assets/portfolio/shots/crazycar-2.webp",
+        "assets/portfolio/shots/crazycar-3.webp",
+        "assets/portfolio/shots/crazycar-4.webp",
+        "assets/portfolio/shots/crazycar-5.webp",
+        "assets/portfolio/shots/crazycar-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.NADESOFT.CrazyCar"
+        }
+      ]
+    },
+    {
+      "id": "school-college-list-bd",
+      "name": "School College List BD: EIIN",
+      "shortName": "School College List BD",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#3b82f6",
+      "category": "Education · Reference",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Search 34,901 schools, colleges and madrasas across all 64 districts, even offline.",
+      "summary": "An offline directory of every educational institute in Bangladesh with instant search, Division → District → Thana filters, EIIN/MPO details and bookmarks.",
+      "description": [
+        "No more scrolling through PDFs and outdated websites. The app holds 34,901 educational institutes from all 64 districts of Bangladesh, searchable as you type, with no internet needed.",
+        "Students choosing an HSC college, parents looking for a school near home, and teachers or job seekers checking an EIIN or MPO status can filter by division, district, thana, institute type, management, level and affiliation."
+      ],
+      "highlights": [
+        {
+          "icon": "database",
+          "title": "34,901 institutes on-device",
+          "text": "A bundled SQLite database gives instant, fully offline search."
+        },
+        {
+          "icon": "filter",
+          "title": "Deep filters",
+          "text": "Division → District → Thana, plus type, management, education level and affiliation."
+        },
+        {
+          "icon": "bookmark",
+          "title": "Bookmarks & profiles",
+          "text": "Save institutes and see full details including EIIN and MPO status."
+        },
+        {
+          "icon": "languages",
+          "title": "Bangla & English",
+          "text": "Complete bilingual UI with light and dark themes."
+        }
+      ],
+      "stats": [
+        {
+          "value": "34,901",
+          "label": "Institutes"
+        },
+        {
+          "value": "64",
+          "label": "Districts"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "SQLite",
+        "Firebase",
+        "Google Sign-In",
+        "Google AdMob",
+        "i18next"
+      ],
+      "skills": [
+        "Large offline datasets",
+        "Full-text search",
+        "Data cleaning",
+        "Localisation",
+        "Ad monetisation"
+      ],
+      "icon": "assets/portfolio/bdinstitute.webp",
+      "cover": "assets/portfolio/shots/bdinstitute-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/bdinstitute-1.webp",
+        "assets/portfolio/shots/bdinstitute-2.webp",
+        "assets/portfolio/shots/bdinstitute-3.webp",
+        "assets/portfolio/shots/bdinstitute-4.webp",
+        "assets/portfolio/shots/bdinstitute-5.webp",
+        "assets/portfolio/shots/bdinstitute-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.nadesoft.bdschoolcollegelist"
+        }
+      ]
+    },
+    {
+      "id": "guardrail-ai",
+      "name": "GuardRail AI – Privacy Shield for AI Chats",
+      "shortName": "GuardRail AI",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#f97316",
+      "category": "Security · AI Productivity",
+      "platforms": [
+        "Chrome"
+      ],
+      "tagline": "Stop sensitive data leaking into ChatGPT, Claude and Gemini, detected on-device.",
+      "summary": "A data-loss-prevention layer for AI chats. It scans prompts for PII, secrets and company red-flag keywords before they're sent, with an IT-manager console and incident audit trail.",
+      "description": [
+        "GuardRail AI sits between a team and AI platforms like ChatGPT, Claude and Gemini, and keeps trade secrets, credentials and personal data from leaving the browser.",
+        "Prompts are scanned in real time against keyword lists and regex patterns (API keys, internal IDs, card numbers). Violations are blurred and blocked before submission, and IT managers push rules to every employee and review an audit trail of blocked attempts."
+      ],
+      "highlights": [
+        {
+          "icon": "scan-eye",
+          "title": "On-device detection",
+          "text": "Real-time scanning of AI prompt inputs. Nothing is sent to a server to be checked."
+        },
+        {
+          "icon": "shield-alert",
+          "title": "Instant intervention",
+          "text": "Blurs and blocks submission when a violation is detected, with smart redaction."
+        },
+        {
+          "icon": "building-2",
+          "title": "IT manager console",
+          "text": "Centrally defined red-flag keywords and regex rules, pushed to every seat in real time."
+        },
+        {
+          "icon": "scroll-text",
+          "title": "Audit trail",
+          "text": "A log of every blocked attempt with user, site and the specific violation."
+        },
+        {
+          "icon": "layers",
+          "title": "Multi-tenant",
+          "text": "Company data is isolated with Firebase security rules."
+        }
+      ],
+      "stats": [
+        {
+          "value": "MV3",
+          "label": "Manifest"
+        },
+        {
+          "value": "v1.0.2",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Chrome Extension (MV3)",
+        "Webpack",
+        "Tailwind CSS",
+        "Zustand",
+        "Firebase",
+        "dnd-kit"
+      ],
+      "skills": [
+        "Data-loss prevention",
+        "Content scripts",
+        "Regex detection engines",
+        "Multi-tenant security rules",
+        "Enterprise governance"
+      ],
+      "icon": "assets/portfolio/guardrail.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/guardrail-1.webp",
+        "assets/portfolio/shots/guardrail-2.webp",
+        "assets/portfolio/shots/guardrail-3.webp"
+      ],
+      "links": [
+        {
+          "store": "chrome-web-store",
+          "url": "https://chromewebstore.google.com/detail/hekcojdjbfehikeakoihbcjocececllp"
+        }
+      ]
+    },
+    {
+      "id": "minimalist-expense-tracker",
+      "name": "Minimalist Expense Tracker",
+      "shortName": "Expense Tracker",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#eab308",
+      "category": "Finance · Budgeting",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Log a purchase in 3 seconds and turn saving money into a game.",
+      "summary": "A budgeting app built around 1-tap logging, gamified streaks and leaderboards, clean insights, and Pro exports to Excel and PDF.",
+      "description": [
+        "Minimalist Expense Tracker strips away confusing charts and banking jargon. Open the app, tap a category, and you're done. Logging takes about three seconds.",
+        "Badges, streaks, levels and a global top-100 leaderboard reward staying on budget. Pro unlocks full history, Excel and PDF export, custom ranges, budget alerts and period-over-period comparisons through a RevenueCat subscription."
+      ],
+      "highlights": [
+        {
+          "icon": "mouse-pointer-click",
+          "title": "1-tap logging",
+          "text": "No forms or typing. Each expense takes about three seconds."
+        },
+        {
+          "icon": "trophy",
+          "title": "Gamified budgeting",
+          "text": "Badges, daily streaks, levels and a global leaderboard of top savers."
+        },
+        {
+          "icon": "pie-chart",
+          "title": "Real insights",
+          "text": "Weekly, monthly and yearly charts with a smart daily budget tip."
+        },
+        {
+          "icon": "file-spreadsheet",
+          "title": "Excel & PDF export",
+          "text": "Pro reports export to XLSX or PDF for any date range."
+        },
+        {
+          "icon": "credit-card",
+          "title": "Subscriptions",
+          "text": "Pro tier powered by RevenueCat."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3s",
+          "label": "Per entry"
+        },
+        {
+          "value": "Top 100",
+          "label": "Leaderboard"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "Firebase",
+        "RevenueCat",
+        "Gifted Charts",
+        "SheetJS",
+        "Reanimated"
+      ],
+      "skills": [
+        "Gamification",
+        "Subscription billing",
+        "Data visualisation",
+        "Report export",
+        "Micro-interactions"
+      ],
+      "icon": "assets/portfolio/expense.webp",
+      "cover": "assets/portfolio/shots/expense-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/expense-1.webp",
+        "assets/portfolio/shots/expense-2.webp",
+        "assets/portfolio/shots/expense-3.webp",
+        "assets/portfolio/shots/expense-4.webp",
+        "assets/portfolio/shots/expense-5.webp",
+        "assets/portfolio/shots/expense-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.nadesoft.bestexpensetracker"
+        }
+      ]
+    },
+    {
+      "id": "sea-blaster",
+      "name": "Sea Blaster: Pirate Ships",
+      "shortName": "Sea Blaster",
+      "type": "game",
+      "status": "coming-soon",
+      "featured": false,
+      "accent": "#0ea5e9",
+      "category": "Arcade · Shooter",
+      "platforms": [
+        "Android",
+        "Windows"
+      ],
+      "tagline": "Steer one-handed, auto-blast pirate fleets, dodge cannon fire and upgrade your ship.",
+      "summary": "A colourful arcade shooter with auto-firing cannons, 7 collectible pirate ships, boss fights, telegraphed enemy fire and Play Games achievements.",
+      "description": [
+        "Players race down an endless sea, sink pirate fleets and grow stronger every run. The cannon locks on and fires by itself, so the whole game is about steering, positioning and staying alive.",
+        "Enemy ships and sea towers fire back, and a red marker shows where each shot will land. Seven ships to unlock, from fast smugglers to the cursed Ghost Ship, each play differently."
+      ],
+      "highlights": [
+        {
+          "icon": "crosshair",
+          "title": "Auto-fire combat",
+          "text": "One-finger steering while the cannon targets enemies automatically."
+        },
+        {
+          "icon": "ship",
+          "title": "7 pirate ships",
+          "text": "Smugglers, brigantines, ironclads, the triple-shot galleon and the Ghost Ship."
+        },
+        {
+          "icon": "skull",
+          "title": "Boss battles",
+          "text": "Telegraphed attacks and multi-stage bosses across five seas."
+        },
+        {
+          "icon": "award",
+          "title": "30 achievements",
+          "text": "Google Play Games achievements and leaderboards for best stage and ships sunk."
+        },
+        {
+          "icon": "calendar-check",
+          "title": "Daily rewards",
+          "text": "Login rewards, three daily missions and a weekly challenge."
+        }
+      ],
+      "stats": [
+        {
+          "value": "7",
+          "label": "Ships"
+        },
+        {
+          "value": "30",
+          "label": "Achievements"
+        }
+      ],
+      "tech": [
+        "Unity",
+        "C#",
+        "URP",
+        "Google Play Games Services"
+      ],
+      "skills": [
+        "Combat design",
+        "Enemy telegraphing",
+        "Progression systems",
+        "Performance tuning",
+        "Multi-store packaging"
+      ],
+      "icon": "assets/portfolio/seablaster.webp",
+      "cover": "assets/portfolio/shots/seablaster-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/seablaster-1.webp",
+        "assets/portfolio/shots/seablaster-2.webp",
+        "assets/portfolio/shots/seablaster-3.webp",
+        "assets/portfolio/shots/seablaster-4.webp",
+        "assets/portfolio/shots/seablaster-5.webp",
+        "assets/portfolio/shots/seablaster-6.webp"
+      ],
+      "links": []
+    },
+    {
+      "id": "brew-buddy",
+      "name": "Brew Buddy: Sleep Cycle Repair",
+      "shortName": "Brew Buddy",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#b45309",
+      "category": "Health · Sleep",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "A caffeine tracker that models decay in real time, so coffee stops stealing your sleep.",
+      "summary": "A caffeine tracker that uses a half-life decay model to show how much caffeine is active right now and at bedtime, with sleep-aware cutoff alerts.",
+      "description": [
+        "Brew Buddy doesn't just count cups. A caffeine half-life model gives a live estimate of the milligrams still active, updating as time passes and tuned to slow, average or fast metabolism.",
+        "Users set a bedtime and a sleep-safe threshold, and the app predicts caffeine at lights-out and warns before a cup would still be active when they turn in."
+      ],
+      "highlights": [
+        {
+          "icon": "activity",
+          "title": "Live decay model",
+          "text": "Half-life pharmacokinetics give a real-time estimate of active caffeine."
+        },
+        {
+          "icon": "moon",
+          "title": "Sleep-aware alerts",
+          "text": "Predicts the level at bedtime and warns before a late cup."
+        },
+        {
+          "icon": "coffee",
+          "title": "Custom drink library",
+          "text": "Espresso, cold brew, tea and energy drinks, plus custom presets and cup sizes."
+        },
+        {
+          "icon": "line-chart",
+          "title": "Analytics",
+          "text": "Rich charts rendered with Skia and Gifted Charts."
+        }
+      ],
+      "stats": [
+        {
+          "value": "Live",
+          "label": "mg estimate"
+        },
+        {
+          "value": "3 taps",
+          "label": "To log a drink"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "Firebase",
+        "React Native Skia",
+        "Gifted Charts",
+        "Reanimated",
+        "i18next"
+      ],
+      "skills": [
+        "Scientific modelling",
+        "Data visualisation",
+        "Scheduled notifications",
+        "Localisation",
+        "Animation"
+      ],
+      "icon": "assets/portfolio/brewbuddy.webp",
+      "cover": "assets/portfolio/shots/brewbuddy-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/brewbuddy-1.webp",
+        "assets/portfolio/shots/brewbuddy-2.webp",
+        "assets/portfolio/shots/brewbuddy-3.webp",
+        "assets/portfolio/shots/brewbuddy-4.webp",
+        "assets/portfolio/shots/brewbuddy-5.webp",
+        "assets/portfolio/shots/brewbuddy-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.brewbuddy.app"
+        }
+      ]
+    },
+    {
+      "id": "promptly",
+      "name": "Promptly – AI Prompt Management Suite",
+      "shortName": "Promptly",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#6366f1",
+      "category": "AI Productivity",
+      "platforms": [
+        "Chrome"
+      ],
+      "tagline": "A prompt library and memory layer for ChatGPT, Claude and Gemini.",
+      "summary": "A prompt manager with variable templates, a New Tab workspace, an in-chat sidebar for one-click injection, cloud sync and team seats.",
+      "description": [
+        "Promptly sits between the user and AI models as a memory layer for complex, repetitive instructions. Templates use [Variable] placeholders that are detected automatically and filled in at use time.",
+        "A New Tab workspace organises prompts into workflows, and a sidebar inside ChatGPT, Claude and Gemini injects them with one click. Prompts sync through Firebase, and Pro and Team tiers are billed through Lemon Squeezy."
+      ],
+      "highlights": [
+        {
+          "icon": "braces",
+          "title": "Variable templates",
+          "text": "[Tone], [Subject] and similar placeholders are detected and filled at run time."
+        },
+        {
+          "icon": "panel-right",
+          "title": "In-chat sidebar",
+          "text": "One-click prompt injection inside ChatGPT, Claude and Gemini."
+        },
+        {
+          "icon": "layout-grid",
+          "title": "New Tab workspace",
+          "text": "Drag-and-drop boards to organise prompts into workflows."
+        },
+        {
+          "icon": "cloud",
+          "title": "Cloud sync & teams",
+          "text": "Firebase sync with local-first caching, plus shared team workflows."
+        },
+        {
+          "icon": "credit-card",
+          "title": "SaaS billing",
+          "text": "Pro status verified in real time through the Lemon Squeezy API."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3",
+          "label": "AI platforms"
+        },
+        {
+          "value": "v1.0.3",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Chrome Extension (MV3)",
+        "Webpack",
+        "Tailwind CSS",
+        "Zustand",
+        "Firebase",
+        "Lemon Squeezy",
+        "dnd-kit"
+      ],
+      "skills": [
+        "Content script injection",
+        "SaaS licensing",
+        "Cloud sync",
+        "Drag-and-drop UX",
+        "Team seat management"
+      ],
+      "icon": "assets/portfolio/promptly.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/promptly-1.webp",
+        "assets/portfolio/shots/promptly-2.webp",
+        "assets/portfolio/shots/promptly-3.webp"
+      ],
+      "links": [
+        {
+          "store": "chrome-web-store",
+          "url": "https://chromewebstore.google.com/detail/loiopkajdlandleboeibecfjlidgbijd"
+        }
+      ]
+    },
+    {
+      "id": "tazkiyah",
+      "name": "Tazkiyah – Habit Builder",
+      "shortName": "Tazkiyah",
+      "type": "app",
+      "status": "coming-soon",
+      "featured": false,
+      "accent": "#10b981",
+      "category": "Lifestyle · Habits",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "A free, ad-free Islamic habit builder with Quran, prayer times, Qibla and Ramadan mode.",
+      "summary": "A local-first habit app for prayers, Quran and Sunnah, with forgiving streaks, tiered achievements, activity heatmaps and a Hijri-calendar Ramadan mode, built to run at zero backend cost.",
+      "description": [
+        "Tazkiyah works fully offline from first launch on an anonymous account. Signing in only adds cross-device sync and the leaderboard.",
+        "Users track the five daily prayers, Jummah and Ramadan habits alongside unlimited custom ones, with grace-day streaks that aren't all-or-nothing. Prayer times come from the Aladhan API, the Quran from Al-Quran Cloud (cached offline), and the Qibla from the device magnetometer."
+      ],
+      "highlights": [
+        {
+          "icon": "check-circle-2",
+          "title": "Forgiving streaks",
+          "text": "Grace-day logic keeps one missed day from wiping out progress."
+        },
+        {
+          "icon": "award",
+          "title": "Tiered achievements",
+          "text": "Common-to-legendary badges that unlock cosmetic profile rings."
+        },
+        {
+          "icon": "grid-3x3",
+          "title": "Activity heatmap",
+          "text": "GitHub-style heatmap and per-habit consistency stats."
+        },
+        {
+          "icon": "moon-star",
+          "title": "Ramadan mode",
+          "text": "Real Hijri-calendar detection, a 30-day dua library and daily challenges."
+        },
+        {
+          "icon": "compass",
+          "title": "Qibla compass",
+          "text": "Magnetometer and great-circle bearing to the Kaaba, with distance."
+        },
+        {
+          "icon": "piggy-bank",
+          "title": "Zero backend cost",
+          "text": "Local-first design with a minimal Firebase footprint, so it can scale for free."
+        }
+      ],
+      "stats": [
+        {
+          "value": "0",
+          "label": "Ads"
+        },
+        {
+          "value": "100%",
+          "label": "Offline-first"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "React Navigation",
+        "Firebase",
+        "Expo Sensors",
+        "Expo Location",
+        "Expo Updates",
+        "i18next"
+      ],
+      "skills": [
+        "Local-first architecture",
+        "Third-party API integration",
+        "Sensor fusion",
+        "Gamification",
+        "OTA updates"
+      ],
+      "icon": "assets/portfolio/tazkiyah.webp",
+      "cover": "assets/portfolio/shots/tazkiyah-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/tazkiyah-1.webp",
+        "assets/portfolio/shots/tazkiyah-2.webp",
+        "assets/portfolio/shots/tazkiyah-3.webp",
+        "assets/portfolio/shots/tazkiyah-4.webp",
+        "assets/portfolio/shots/tazkiyah-5.webp",
+        "assets/portfolio/shots/tazkiyah-6.webp"
+      ],
+      "links": []
+    },
+    {
+      "id": "meeting-cost-calculator",
+      "name": "Meeting Cost Calculator",
+      "shortName": "Meeting Cost Calculator",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#22c55e",
+      "category": "Productivity · Teams",
+      "platforms": [
+        "Chrome"
+      ],
+      "tagline": "See what every Google Meet, Zoom and Teams call really costs, live.",
+      "summary": "A real-time meeting cost overlay for Google Meet, Zoom and Microsoft Teams, with ROI tracking, a dashboard and PDF and Excel reports. No access to audio, video or chat.",
+      "description": [
+        "Meeting Cost Calculator adds a live cost ticker to video calls based on participant count and hourly rates, and updates as people join or leave.",
+        "A dashboard flags expensive recurring meetings and exports reports to PDF or Excel. All calculations run locally, and the extension never reads meeting audio, video or chat."
+      ],
+      "highlights": [
+        {
+          "icon": "timer",
+          "title": "Live cost overlay",
+          "text": "A draggable ticker inside Meet, Zoom and Teams."
+        },
+        {
+          "icon": "trending-down",
+          "title": "ROI insights",
+          "text": "Spots low-value and expensive recurring meetings."
+        },
+        {
+          "icon": "file-down",
+          "title": "PDF & Excel reports",
+          "text": "Exports with jsPDF and SheetJS."
+        },
+        {
+          "icon": "lock",
+          "title": "Privacy-first",
+          "text": "Local calculations only, with no meeting content accessed."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3",
+          "label": "Platforms"
+        },
+        {
+          "value": "v2.0.0",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Chrome Extension (MV3)",
+        "Vite",
+        "Firebase",
+        "jsPDF",
+        "SheetJS"
+      ],
+      "skills": [
+        "DOM integration",
+        "Real-time UI",
+        "Report generation",
+        "Privacy-by-design"
+      ],
+      "icon": "assets/portfolio/meetingcost.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/meetingcost-1.webp",
+        "assets/portfolio/shots/meetingcost-2.webp",
+        "assets/portfolio/shots/meetingcost-3.webp",
+        "assets/portfolio/shots/meetingcost-4.webp",
+        "assets/portfolio/shots/meetingcost-5.webp"
+      ],
+      "links": [
+        {
+          "store": "chrome-web-store",
+          "url": "https://chromewebstore.google.com/detail/kobcbdkbmpnldjebccnfinibnofpiibb"
+        }
+      ]
+    },
+    {
+      "id": "time-travel-taxi",
+      "name": "Time Travel Taxi: Car Racing",
+      "shortName": "Time Travel Taxi",
+      "type": "game",
+      "status": "coming-soon",
+      "featured": false,
+      "accent": "#facc15",
+      "category": "Racing · Arcade",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Pick up fares across time, drift through portals and beat the clock.",
+      "summary": "An arcade taxi racer across Modern, Fantasy and Haunted eras, with drift physics, time portals, passenger events and an upgradeable garage of time-machine taxis.",
+      "description": [
+        "Every fare is a race. Players find the passenger, pick them up and deliver before time runs out, grabbing glowing time potions for extra seconds and chaining deliveries for tips.",
+        "Time portals jump between a busy modern city, an enchanted fantasy kingdom and a haunted graveyard mid-run, and drift mechanics let the taxi slide around corners without losing speed."
+      ],
+      "highlights": [
+        {
+          "icon": "hourglass",
+          "title": "Beat the clock",
+          "text": "Fare timers, time potions and delivery chains for tips."
+        },
+        {
+          "icon": "orbit",
+          "title": "3 eras via portals",
+          "text": "Modern City, Fantasy Kingdom and Haunted Graveyard, switched mid-run."
+        },
+        {
+          "icon": "wind",
+          "title": "Drift physics",
+          "text": "Slide around corners and off walls without losing speed, with nitro boost."
+        },
+        {
+          "icon": "wrench",
+          "title": "Upgradeable garage",
+          "text": "A collection of time-machine taxis with upgrades and customisation."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3",
+          "label": "Eras"
+        }
+      ],
+      "tech": [
+        "Unity 6",
+        "C#",
+        "URP",
+        "Vehicle Physics"
+      ],
+      "skills": [
+        "Vehicle handling",
+        "World streaming",
+        "Game feel",
+        "Progression design"
+      ],
+      "icon": "assets/portfolio/timetaxi.webp",
+      "cover": "assets/portfolio/shots/timetaxi-cover.webp",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/timetaxi-1.webp",
+        "assets/portfolio/shots/timetaxi-2.webp",
+        "assets/portfolio/shots/timetaxi-3.webp",
+        "assets/portfolio/shots/timetaxi-4.webp",
+        "assets/portfolio/shots/timetaxi-5.webp",
+        "assets/portfolio/shots/timetaxi-6.webp",
+        "assets/portfolio/shots/timetaxi-7.webp",
+        "assets/portfolio/shots/timetaxi-8.webp"
+      ],
+      "links": []
+    },
+    {
+      "id": "lockfy",
+      "name": "Lockfy: Lockscreen & Wallpaper",
+      "shortName": "Lockfy",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#ef4444",
+      "category": "Tools · Personalisation",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Design a lock screen wallpaper with emergency and medical info built right in.",
+      "summary": "A paid lock screen editor with templates, photo, gradient and text layers, safety stickers and full-resolution export. ICE contacts stay readable without unlocking the phone.",
+      "description": [
+        "Lockfy puts a full layered editor in your pocket. Users start from a template or a blank canvas, add photos, gradients, text and stickers, and arrange everything with gestures.",
+        "A lock screen guide shows where the clock and widgets sit so nothing important gets hidden, and the result exports at full resolution and sets as the wallpaper in one step."
+      ],
+      "highlights": [
+        {
+          "icon": "layers",
+          "title": "Layered canvas editor",
+          "text": "Move, scale, rotate and layer elements with multi-touch gestures, plus undo/redo and autosave."
+        },
+        {
+          "icon": "heart-pulse",
+          "title": "ICE & medical info",
+          "text": "Emergency contacts, blood type and allergies, readable from the lock screen."
+        },
+        {
+          "icon": "type",
+          "title": "Rich typography",
+          "text": "Curated fonts, colours, alignment and shadows."
+        },
+        {
+          "icon": "image-down",
+          "title": "Full-res export",
+          "text": "Renders the canvas at device resolution and sets it directly."
+        }
+      ],
+      "stats": [
+        {
+          "value": "Paid",
+          "label": "Premium app"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "Reanimated",
+        "Gesture Handler",
+        "View Shot",
+        "Media Library",
+        "Bottom Sheet"
+      ],
+      "skills": [
+        "Canvas editors",
+        "Gesture systems",
+        "Image rendering & export",
+        "Paid app distribution"
+      ],
+      "icon": "assets/portfolio/lockfy.webp",
+      "cover": "assets/portfolio/shots/lockfy-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/lockfy-1.webp",
+        "assets/portfolio/shots/lockfy-2.webp",
+        "assets/portfolio/shots/lockfy-3.webp",
+        "assets/portfolio/shots/lockfy-4.webp",
+        "assets/portfolio/shots/lockfy-5.webp",
+        "assets/portfolio/shots/lockfy-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.abdullahwins.LockInfoSlap"
+        }
+      ]
+    },
+    {
+      "id": "dealmagnet",
+      "name": "DealMagnet: The Intelligence Layer",
+      "shortName": "DealMagnet",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#8b5cf6",
+      "category": "Sales · CRM",
+      "platforms": [
+        "Chrome"
+      ],
+      "tagline": "A lightweight deal pipeline inside Gmail and LinkedIn.",
+      "summary": "A sales intelligence extension that captures leads from Gmail and LinkedIn profiles into a staged pipeline board, with cloud sync and Pro licensing.",
+      "description": [
+        "DealMagnet adds deal intelligence to the tools salespeople already live in. It captures a profile's headline and role from LinkedIn or a contact from Gmail in one click, so every lead already has context.",
+        "Captured leads flow into a pipeline board with Lead, Contacted, Negotiation and Closed stages, synced with Firebase and unlocked for Pro through Lemon Squeezy."
+      ],
+      "highlights": [
+        {
+          "icon": "mail",
+          "title": "Gmail & LinkedIn",
+          "text": "Content scripts surface a deal panel next to the conversation or profile."
+        },
+        {
+          "icon": "kanban",
+          "title": "Pipeline board",
+          "text": "Every deal touched, organised by stage."
+        },
+        {
+          "icon": "cloud",
+          "title": "Cloud sync",
+          "text": "Firebase-backed so the pipeline follows the user."
+        },
+        {
+          "icon": "credit-card",
+          "title": "Pro licensing",
+          "text": "Lemon Squeezy subscriptions."
+        }
+      ],
+      "stats": [
+        {
+          "value": "v1.0.3",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Chrome Extension (MV3)",
+        "Vite",
+        "Sass",
+        "Firebase",
+        "Lemon Squeezy"
+      ],
+      "skills": [
+        "Third-party UI injection",
+        "CRM workflows",
+        "SaaS licensing"
+      ],
+      "icon": "assets/portfolio/dealmagnet.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/dealmagnet-1.webp",
+        "assets/portfolio/shots/dealmagnet-2.webp",
+        "assets/portfolio/shots/dealmagnet-3.webp"
+      ],
+      "links": [
+        {
+          "store": "chrome-web-store",
+          "url": "https://chromewebstore.google.com/detail/ijacfnphjjdkdfhopcblbiigpbmppeji"
+        }
+      ]
+    },
+    {
+      "id": "swiftserve",
+      "name": "SwiftServe",
+      "shortName": "SwiftServe",
+      "type": "saas",
+      "status": "in-development",
+      "featured": false,
+      "accent": "#f43f5e",
+      "category": "Restaurant Tech · Multi-Tenant SaaS",
+      "platforms": [
+        "Web",
+        "PWA"
+      ],
+      "tagline": "White-label restaurant management: QR ordering, POS, kitchen display and admin in one platform.",
+      "summary": "A multi-tenant restaurant SaaS with subdomain-per-restaurant routing, real-time order flow over WebSockets, four React apps (admin, POS, KDS, customer QR ordering) and subscription billing.",
+      "description": [
+        "SwiftServe is built for small restaurants that need to cut manpower without losing speed. Customers order from a QR-code PWA at the table, orders stream live to a kitchen display, and waitstaff and cashiers run a PWA point of sale.",
+        "Each restaurant gets its own subdomain, resolved from the Host header on every request, and every tenant-owned document is scoped by restaurantId through a global enforcement layer with isolation tests. Prices and tax are always computed server-side."
+      ],
+      "highlights": [
+        {
+          "icon": "qr-code",
+          "title": "QR table ordering",
+          "text": "A customer PWA that orders straight from the table."
+        },
+        {
+          "icon": "monitor",
+          "title": "Kitchen display",
+          "text": "Live order lifecycle from Pending to Received, Preparing, Ready, Served and Paid over Socket.IO."
+        },
+        {
+          "icon": "receipt",
+          "title": "PWA point of sale",
+          "text": "For waitstaff and cashiers, with Cash, Card, bKash and Nagad payment recording."
+        },
+        {
+          "icon": "network",
+          "title": "Subdomain multi-tenancy",
+          "text": "<slug>.swiftserve.app with strict per-tenant data isolation."
+        },
+        {
+          "icon": "badge-dollar-sign",
+          "title": "Subscription billing",
+          "text": "Plans and invoices behind a provider interface ready for automated collection."
+        },
+        {
+          "icon": "container",
+          "title": "Docker deploy",
+          "text": "API, MongoDB and Nginx on Docker Compose with wildcard TLS."
+        }
+      ],
+      "stats": [
+        {
+          "value": "4",
+          "label": "Front-end apps"
+        },
+        {
+          "value": "17",
+          "label": "Milestones"
+        }
+      ],
+      "tech": [
+        "NestJS",
+        "TypeScript",
+        "MongoDB",
+        "Mongoose",
+        "Socket.IO",
+        "JWT / Passport",
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Docker",
+        "Nginx"
+      ],
+      "skills": [
+        "Multi-tenant architecture",
+        "Real-time systems",
+        "Role-based auth",
+        "PWA",
+        "Billing systems",
+        "DevOps"
+      ],
+      "icon": "",
+      "fallbackIcon": "utensils-crossed",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [],
+      "links": []
+    },
+    {
+      "id": "genzym",
+      "name": "GenZym – Digital Gym",
+      "shortName": "GenZym",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#facc15",
+      "category": "Health · Fitness",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Tiny daily challenges, real XP, zero guilt. A gym that doesn't take itself seriously.",
+      "summary": "A gamified micro-fitness app with random daily routines, XP, coins, streaks, a cosmetic store and leaderboards, with Gen-Z humour and a dark-only design.",
+      "description": [
+        "GenZym turns consistency into a game. Users get a random routine of small, silly, low-effort tasks, finish them in one tap, and earn XP, coins, badges and streaks.",
+        "Coins buy profile frames and flex titles in the store, and a leaderboard keeps it social. Premium adds extra challenges, advanced tracking and exclusive themes."
+      ],
+      "highlights": [
+        {
+          "icon": "dumbbell",
+          "title": "1-tap reps",
+          "text": "Finish a micro-workout and bank the XP."
+        },
+        {
+          "icon": "store",
+          "title": "Cosmetic store",
+          "text": "Spend coins on frames and flex titles."
+        },
+        {
+          "icon": "trophy",
+          "title": "Leaderboards",
+          "text": "Streaks, badges and social ranking."
+        },
+        {
+          "icon": "sparkles",
+          "title": "Juicy feedback",
+          "text": "Skia-rendered visuals, confetti and haptics."
+        }
+      ],
+      "stats": [
+        {
+          "value": "+50 XP",
+          "label": "Per rep"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "Firebase",
+        "Crashlytics",
+        "RevenueCat",
+        "React Native Skia",
+        "Reanimated"
+      ],
+      "skills": [
+        "Gamification",
+        "Virtual economy",
+        "Subscriptions",
+        "Motion design"
+      ],
+      "icon": "assets/portfolio/genzym.webp",
+      "cover": "assets/portfolio/shots/genzym-cover.webp",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/genzym-1.webp",
+        "assets/portfolio/shots/genzym-2.webp",
+        "assets/portfolio/shots/genzym-3.webp",
+        "assets/portfolio/shots/genzym-4.webp",
+        "assets/portfolio/shots/genzym-5.webp",
+        "assets/portfolio/shots/genzym-6.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.nadesoft.genzym"
+        }
+      ]
+    },
+    {
+      "id": "linkpin",
+      "name": "LinkPin – Personal Link Workspace",
+      "shortName": "LinkPin",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#3b82f6",
+      "category": "Productivity · Bookmarks",
+      "platforms": [
+        "Chrome"
+      ],
+      "tagline": "Colour-coded topic shelves for your links, one-click pinning and instant Cmd+K search.",
+      "summary": "A New Tab link workspace with topic shelves, board and list views, usage-ranked links, and Cmd/Ctrl+K search. 100% local, with no account.",
+      "description": [
+        "LinkPin turns scattered bookmarks and open tabs into an organised, searchable workspace on the New Tab page. Any tab can be pinned into a colour-coded topic in one click.",
+        "Everything is stored locally with chrome.storage: no account, no server and no tracking. Deleted links are archived and restorable, and backups export with one click."
+      ],
+      "highlights": [
+        {
+          "icon": "pin",
+          "title": "One-click pin",
+          "text": "Save the current tab straight into a topic."
+        },
+        {
+          "icon": "search",
+          "title": "Cmd/Ctrl+K search",
+          "text": "Find any link in under a second."
+        },
+        {
+          "icon": "layout-dashboard",
+          "title": "Shelf, Board & List",
+          "text": "Three views with drag-and-drop ordering."
+        },
+        {
+          "icon": "lock",
+          "title": "100% private",
+          "text": "Local storage only, with export/import backups."
+        }
+      ],
+      "stats": [
+        {
+          "value": "0",
+          "label": "Servers"
+        },
+        {
+          "value": "v1.2.0",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Chrome Extension (MV3)",
+        "Webpack",
+        "Tailwind CSS",
+        "Zustand",
+        "dnd-kit",
+        "chrome.storage"
+      ],
+      "skills": [
+        "New Tab overrides",
+        "Local-first storage",
+        "Keyboard-first UX",
+        "Drag-and-drop"
+      ],
+      "icon": "assets/portfolio/linkpin.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [
+        "assets/portfolio/shots/linkpin-1.webp",
+        "assets/portfolio/shots/linkpin-2.webp",
+        "assets/portfolio/shots/linkpin-3.webp",
+        "assets/portfolio/shots/linkpin-4.webp"
+      ],
+      "links": [
+        {
+          "store": "chrome-web-store",
+          "url": "https://chromewebstore.google.com/detail/hfchehpghclhhkpdinniknekabegchhb"
+        }
+      ]
+    },
+    {
+      "id": "solidarity",
+      "name": "Solidarity – Product Origin",
+      "shortName": "Solidarity",
+      "type": "app",
+      "status": "live",
+      "featured": false,
+      "accent": "#16a34a",
+      "category": "Tools · Shopping",
+      "platforms": [
+        "Android"
+      ],
+      "tagline": "Scan any barcode to see its country of origin, judged by an open community vote.",
+      "summary": "A barcode scanner that resolves a product's GS1 country of registration and shows a transparent, crowd-sourced verdict for that country, with XP, streaks and leaderboards.",
+      "description": [
+        "Solidarity lets shoppers know exactly what they're buying. They scan a product's barcode, or type it in, and see the country it's registered to in seconds.",
+        "Instead of a developer deciding which countries are good or bad, every country's status comes from open, real-time community voting that any verified member can update. Scanning and voting earn XP, streaks and badges."
+      ],
+      "highlights": [
+        {
+          "icon": "scan-barcode",
+          "title": "Instant barcode scan",
+          "text": "Camera scanning with GS1 prefix lookup."
+        },
+        {
+          "icon": "vote",
+          "title": "Community voting",
+          "text": "Transparent, live up/down votes per country."
+        },
+        {
+          "icon": "grid-3x3",
+          "title": "Contribution graph",
+          "text": "GitHub-style daily activity with full scan history."
+        },
+        {
+          "icon": "trophy",
+          "title": "XP & leaderboard",
+          "text": "Levels, streaks, badges and an opt-in global ranking."
+        }
+      ],
+      "stats": [
+        {
+          "value": "Live",
+          "label": "Community votes"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Expo Router",
+        "Expo Camera",
+        "Firebase",
+        "Cloud Firestore",
+        "Reanimated"
+      ],
+      "skills": [
+        "Barcode scanning",
+        "Real-time voting",
+        "Abuse-resistant security rules",
+        "Gamification"
+      ],
+      "icon": "assets/portfolio/solidarity.webp",
+      "cover": "",
+      "orientation": "portrait",
+      "screenshots": [
+        "assets/portfolio/shots/solidarity-1.webp",
+        "assets/portfolio/shots/solidarity-2.webp",
+        "assets/portfolio/shots/solidarity-3.webp",
+        "assets/portfolio/shots/solidarity-4.webp",
+        "assets/portfolio/shots/solidarity-5.webp"
+      ],
+      "links": [
+        {
+          "store": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.abdullahwins.solidarity"
+        }
+      ]
+    },
+    {
+      "id": "code-breakout",
+      "name": "Code Breakout",
+      "shortName": "Code Breakout",
+      "type": "extension",
+      "status": "live",
+      "featured": false,
+      "accent": "#a855f7",
+      "category": "Developer Tools · Wellbeing",
+      "platforms": [
+        "VS Code"
+      ],
+      "tagline": "A break enforcer that opens a retro Breakout or Pong game right inside VS Code.",
+      "summary": "A pomodoro-style VS Code extension that tracks real typing time and launches a themed mini-game in an editor tab when it's time to step away.",
+      "description": [
+        "Code Breakout counts continuous coding time from real keystrokes and filters out programmatic edits like format-on-save, so they don't count as work. Idle time resets the counter.",
+        "When a break is due it opens a retro Breakout or Pong game in a Webview themed with the current VS Code colours. Hard Mode hides the skip button and pulls focus back until the break is over."
+      ],
+      "highlights": [
+        {
+          "icon": "keyboard",
+          "title": "Smart activity tracking",
+          "text": "Real keystrokes only, ignoring bulk and programmatic edits."
+        },
+        {
+          "icon": "gamepad",
+          "title": "In-editor mini-games",
+          "text": "Breakout or Pong in a theme-aware Webview."
+        },
+        {
+          "icon": "flame",
+          "title": "Hard Mode",
+          "text": "No skipping, and focus is pulled back to the break."
+        },
+        {
+          "icon": "timer",
+          "title": "Status bar timer",
+          "text": "Shows coding time and a live break countdown."
+        }
+      ],
+      "stats": [
+        {
+          "value": "v0.1.1",
+          "label": "Version"
+        }
+      ],
+      "tech": [
+        "TypeScript",
+        "VS Code Extension API",
+        "Webview",
+        "HTML5 Canvas"
+      ],
+      "skills": [
+        "IDE extension development",
+        "Event filtering",
+        "Canvas game dev"
+      ],
+      "icon": "assets/portfolio/codebreakout.webp",
+      "cover": "",
+      "orientation": "landscape",
+      "screenshots": [],
+      "links": [
+        {
+          "store": "vscode-marketplace",
+          "url": "https://marketplace.visualstudio.com/items?itemName=nadesoft.code-breakout"
+        }
+      ]
+    },
+    {
+      "id": "soundsleep",
+      "name": "SoundSleep",
+      "shortName": "SoundSleep",
+      "type": "app",
+      "status": "in-development",
+      "featured": false,
+      "accent": "#6366f1",
+      "category": "Health · Sleep",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "tagline": "Mix rain, wind, forest and ocean into the soundscape that sends you to sleep.",
+      "summary": "An offline-first sleep app with a 4-track ambient mixer, fade-out sleep timer, shake-to-extend and a gentle wake ramp.",
+      "description": [
+        "SoundSleep layers looping nature sounds into a personal mix, then fades them out over five minutes when the sleep timer ends.",
+        "A shake adds 15 more minutes without unlocking the phone, and Gentle Wake ramps a storm track back in at alarm time, with a Notifee notification as a fallback. Settings persist instantly with MMKV and sync through Firebase."
+      ],
+      "highlights": [
+        {
+          "icon": "sliders-horizontal",
+          "title": "4-track mixer",
+          "text": "Independent volume per ambient layer."
+        },
+        {
+          "icon": "timer-off",
+          "title": "Fade-out timer",
+          "text": "Linear five-minute fade when the timer ends."
+        },
+        {
+          "icon": "vibrate",
+          "title": "Shake to extend",
+          "text": "The accelerometer adds 15 minutes with no unlock needed."
+        },
+        {
+          "icon": "sunrise",
+          "title": "Gentle wake",
+          "text": "Volume ramps in, with a notification fallback."
+        }
+      ],
+      "stats": [
+        {
+          "value": "4",
+          "label": "Audio tracks"
+        }
+      ],
+      "tech": [
+        "React Native",
+        "Expo SDK 55",
+        "TypeScript",
+        "Expo Router",
+        "Zustand",
+        "MMKV",
+        "React Native Firebase",
+        "Notifee",
+        "Expo Audio",
+        "Expo Sensors"
+      ],
+      "skills": [
+        "Audio mixing",
+        "Background playback",
+        "Sensor input",
+        "Offline-first sync"
+      ],
+      "icon": "assets/portfolio/soundsleep.webp",
+      "cover": "",
+      "orientation": "portrait",
+      "screenshots": [],
+      "links": []
+    },
+    {
+      "id": "ludo-pro",
+      "name": "Ludo Pro",
+      "shortName": "Ludo Pro",
+      "type": "game",
+      "status": "in-development",
+      "featured": false,
+      "accent": "#e11d48",
+      "category": "Board · Casual",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "tagline": "Classic Ludo with Power Tiles, a fast Quick Match mode and smart bots.",
+      "summary": "A modern Ludo game with classic rules, Power Tiles that teleport, shield or grant extra rolls, a timer-based Quick Match, and Easy, Medium and Hard bot AI.",
+      "description": [
+        "Ludo Pro keeps the rules everyone knows (roll a 6 to leave the yard, capture opponents, use safe squares, race home) and adds Power Tiles that teleport, shield or grant an extra roll.",
+        "Quick Match makes a shorter, timer-based game, and any seat can be a human or an Easy, Medium or Hard bot, all driven by a match-flow state machine."
+      ],
+      "highlights": [
+        {
+          "icon": "dice-5",
+          "title": "Classic rules",
+          "text": "Faithful Ludo with captures and safe squares."
+        },
+        {
+          "icon": "sparkles",
+          "title": "Power Tiles",
+          "text": "Teleport, shield and extra-roll squares."
+        },
+        {
+          "icon": "bot",
+          "title": "3-level bot AI",
+          "text": "Mix humans and bots in any seat."
+        },
+        {
+          "icon": "timer",
+          "title": "Quick Match",
+          "text": "A shorter, timer-based mode."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3",
+          "label": "Bot levels"
+        }
+      ],
+      "tech": [
+        "Unity 6",
+        "C#",
+        "URP",
+        "Unity Test Framework"
+      ],
+      "skills": [
+        "Game AI",
+        "State machines",
+        "Rules engines",
+        "Automated testing"
+      ],
+      "icon": "",
+      "fallbackIcon": "dice-5",
+      "cover": "",
+      "orientation": "portrait",
+      "screenshots": [],
+      "links": []
+    }
+  ]
+}
